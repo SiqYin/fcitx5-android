@@ -1,0 +1,213 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: wugniu_suwu
+  name: 吳語（混合腔）
+  version: "2025.08.15"
+  author:
+    - 予安 <181065229@qq.com> (dict)
+    - 雪心居士 <sihsin@live.com> (schema)
+    - Shin Zoqchiuq <shinzoqchiuq@outlook.com> (schema)
+    - 雪螢SiqYin <siqyin@qq.com> (dict & schema)
+  description: |
+    基於蘇州吳語注音輸入方案吳語學堂版
+    https://www.wugniu.com/
+    https://github.com/NGLI/rime-wugniu_soutseu/
+    普通閒話反查末撳Q，筆畫反查末撳X
+  dependencies:
+    - luna_pinyin
+    - stroke
+  icon: wugniuji.ico
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [漢字, 羅馬字]
+  - name: full_shape
+    states: [半角, 全角]
+  - name: ascii_punct
+    states: [句讀, 符號]
+  - options: [ noop, varients_wy, variants_hk, trad_tw, varients_jp, simplification, varients_sy]
+    states: [ 漢字, 吳語漢字, 香港漢字, 臺灣漢字, 日本漢字, 汉字, 雪螢漢字] #吳語漢字是照吳文用字標準做脱專門優化搭適配个大陸繁體標準漢字，建議使用
+    reset: 1 #填0到6以選擇默認輸出漢字
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - affix_segmentor@luna_pinyin # 自定義tag luna_pinyin
+    - affix_segmentor@stroke      # 自定義tag stroke
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator              # 主翻譯器
+    - reverse_lookup_translator
+    - script_translator@luna_pinyin  # 用於反查个luna_pinyin翻譯器
+    - table_translator@stroke        # 用於反查个stroke翻譯器
+    - table_translator@custom_phrase # 用户短語
+  filters:
+    - simplifier@varients_wy
+    - simplifier@variants_hk
+    - simplifier@trad_tw
+    - simplifier@varients_jp
+    - simplifier@varients_sy
+    - simplifier
+    - uniquifier
+    - reverse_lookup_filter@wy_reverse_lookup # 反查濾鏡
+
+speller:
+  alphabet: abcdefghijklmnopqrstuvwxyz
+  delimiter: " '"
+  algebra:
+    # xform  - 改寫（調脱，弗共存）
+    # derive  - 衍生（共存，單向模糊音）
+    # abbrev  - 簡拼（出字優先級比前兩組低）
+    # fuzz    - 略拼（只用在上組詞，弗出單字）
+    # xlit    - 變換（適合大量个一對一變換）
+    # erase   - 刪脱
+    
+    - xform/^([bcdfghjklpqstvwxyz])$/$1_/
+    - xform/\d//     # 聲調去脱
+
+    # 兼容吳語協會式拼音
+    #- derive/q/h/
+    #- derive/gni(?=[nqh]|\d|\b)/nyi/
+    #- derive/gni(?=[aoue])/ny/
+    #- derive/er/r/
+
+    # 尖團弗分
+    - derive/ts(h?)i/c$1i/
+    - derive/^(s|z)i/$1hi/
+    # 干官弗分
+    - derive/uoe/oe/
+    - derive/woe/ghoe/
+    # 求拳弗分
+    #- derive/(?<=[yi])eu/oe/
+    # 打黨弗分
+    - derive/aon/an/
+    - derive/an/aon/
+    # 走酒弗分
+    - derive/ieu/eu/
+    # 李旅弗分
+    - derive/(?<=[szhl])iu/i/
+    # 麻摩弗分
+    - derive/mu/mo/
+    # 郭國弗分
+    - derive/ueq/oq/
+    - derive/weq/ghoq/
+    # u韻變體
+    - derive/u/ou/
+    # wu音變體
+    - derive/wu/ghou/
+    # 襪麥弗分
+    - derive/ae(?=q|h)/a/
+    # 司書弗分
+    - derive/(?<=[szh])yu/y/
+
+    # 簡拼
+    - abbrev/^([a-z]).+$/$1/
+    - abbrev/^([pmtnlszckg]h|gn|ng|tsh?|dz).+$/$1/
+    # uen韻簡拼
+    - derive/uen/un/
+    # 容差 au => ao
+    #- derive/au/ao/
+    # c組聲母後自動加i
+    - derive/^(c|j|gn|[csz]h)i(?=[aoue])/$1/
+    # 容差 介音、主元音順序相調
+    - derive/^(.+)([iu])([aeou])([euonqh])$/$1$3$2$4/
+    # 容差 oe => eo
+    #- derive/oe/eo/
+    # 容差 ao => oa
+    #- derive/ao/oa/
+
+# 主翻譯器 吳拼
+translator:
+  dictionary: wugniu_suwu # 調取詞典wugniu_suwu
+  prism: wugniu_suwu      # 根據拼寫運算生成棱鏡文件wugniu_suwu
+  spelling_hints: 1          # 標註拼音
+  comment_format:
+    # 單字調弗顯示
+    - xform/\d//
+
+# 副翻譯器1 明月拼音
+luna_pinyin:
+  tag: luna_pinyin
+  dictionary: luna_pinyin
+  prefix: "q"
+  tips: 〔普通閒話〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+# 副翻譯器2 筆畫
+stroke:
+  tag: stroke
+  dictionary: stroke
+  prefix: "x"
+  tips: 〔筆畫〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+    
+# 副翻譯器3 用户短語
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase # 用户詞典名
+  db_class: stabledb       # 詞典類型爲僅讀格式
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
+
+# 反查濾鏡
+wy_reverse_lookup:
+  tags: [luna_pinyin, stroke] # 掛在翻譯器luna_pinyin搭stroke上向
+  overwrite_comment: true     # 其他提示覆蓋脱
+  dictionary: wugniu_suwu  # 反查所得爲蘇滬吳拼
+  comment_format:
+    __include: translator/comment_format 
+
+# 吳語漢字（照吳文用字標準做脱專門優化搭適配个大陸繁體標準漢字）
+varients_wy:
+  option_name: varients_wy
+  opencc_config: s2wy.json
+# 香港繁體  
+variants_hk:
+  option_name: variants_hk
+  opencc_config: t2hk.json
+# 臺灣繁體
+trad_tw:
+  option_name: trad_tw
+  opencc_config: t2tw.json
+# 日本新字体  
+varients_jp:
+  option_name: varients_jp
+  opencc_config: t2jp.json
+# 雪螢漢字（雪螢照自家个偏好設定个吳文漢字標準，也經過仔吳文優化搭適配哉）
+varients_sy:
+  option_name: varients_sy
+  opencc_config: t2sy.json
+  
+punctuator:
+  import_preset: symbols_wu # 句讀處理器，統一從外部導入
+
+key_binder:
+  import_preset: default # 快捷鍵，統一從外部導入
+
+recognizer:
+  import_preset: default # 特殊規則輸入碼，統一從外部導入
+  patterns:
+    punct: "^/([0-9]0?|[A-Za-z]+)$"
+    luna_pinyin: "^q[a-z']*$"
+    stroke: "^x[hspnz]*$"

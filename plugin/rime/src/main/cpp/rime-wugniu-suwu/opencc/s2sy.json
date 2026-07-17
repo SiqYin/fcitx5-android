@@ -1,0 +1,16 @@
+{
+  "name": "Simplified Chinese to SiqYin Chinese",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "SYCharacters.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "text",
+      "file": "SYCharacters.txt"
+    }
+  }]
+}

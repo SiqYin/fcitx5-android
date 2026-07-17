@@ -1,0 +1,21 @@
+{
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "SWPhrases.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "group",
+      "dicts": [{
+        "type": "text",
+        "file": "SWPhrases.txt"
+      }, {
+        "type": "text",
+        "file": "SWCharacters.txt"
+      }]
+    }
+  }]
+}

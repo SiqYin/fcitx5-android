@@ -1,0 +1,66 @@
+name: Build Custom APK
+
+on:
+  push:
+    branches: [ "master", "main", "build/*" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Fetch source code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Setup Android environment
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android NDK & CMake
+        run: |
+          sdkmanager --install "cmake;3.31.6"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt update
+          sudo apt install extra-cmake-modules gettext
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+
+      - name: Build Release APK
+        run: |
+          ./gradlew :app:assembleRelease
+          ./gradlew :assembleReleasePlugins
+
+      - name: Upload main APK
+        uses: actions/upload-artifact@v6
+        with:
+          name: fcitx5-android-custom
+          path: app/build/outputs/apk/release/
+
+      - name: Pack plugins
+        shell: bash
+        run: |
+          mkdir -p plugins-to-upload
+          for i in $(ls plugin)
+          do
+            if [ -d "plugin/${i}" ]
+            then
+              mv "plugin/${i}/build/outputs/apk/release" "plugins-to-upload/${i}" 2>/dev/null || true
+            fi
+          done
+
+      - name: Upload plugins
+        uses: actions/upload-artifact@v6
+        with:
+          name: fcitx5-plugins
+          path: plugins-to-upload

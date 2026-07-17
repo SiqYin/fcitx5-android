@@ -57,3 +57,38 @@ install(FILES
         DESTINATION "${FCITX_INSTALL_DATADIR}/rime-data"
         COMPONENT prebuilt-assets
         )
+
+# wugniu_suwu (吴语混合腔) scheme files
+install(FILES
+        "rime-wugniu-suwu/wugniu_suwu.schema.yaml"
+        "rime-wugniu-suwu/wugniu_suwu.dict.yaml"
+        "rime-wugniu-suwu/wuphin.word.dict.yaml"
+        "rime-wugniu-suwu/wuphin.map.dict.yaml"
+        "rime-wugniu-suwu/wuphin.phrases.dict.yaml"
+        "rime-wugniu-suwu/luna_pinyin.sogou.dict.yaml"
+        "rime-wugniu-suwu/sougouciku.dict.yaml"
+        "rime-wugniu-suwu/symbols_wu.yaml"
+        "rime-wugniu-suwu/wugniuji.ico"
+        "rime-wugniu-suwu/wugniuji.png"
+        DESTINATION "${FCITX_INSTALL_DATADIR}/rime-data"
+        COMPONENT prebuilt-assets
+        )
+
+# wugniu_suwu OpenCC config files
+install(FILES
+        "rime-wugniu-suwu/opencc/s2sy.json"
+        "rime-wugniu-suwu/opencc/s2wy.json"
+        "rime-wugniu-suwu/opencc/t2sy.json"
+        "rime-wugniu-suwu/opencc/t2wy.json"
+        "rime-wugniu-suwu/opencc/SWCharacters.txt"
+        "rime-wugniu-suwu/opencc/SWPhrases.txt"
+        "rime-wugniu-suwu/opencc/SYCharacters.txt"
+        "rime-wugniu-suwu/opencc/TSCharacters.txt"
+        "rime-wugniu-suwu/opencc/TSPhrases.txt"
+        "rime-wugniu-suwu/opencc/TSCharacters.ocd"
+        "rime-wugniu-suwu/opencc/TSCharacters.ocd2"
+        "rime-wugniu-suwu/opencc/TSPhrases.ocd"
+        "rime-wugniu-suwu/opencc/TSPhrases.ocd2"
+        DESTINATION "${FCITX_INSTALL_DATADIR}/rime-data/opencc"
+        COMPONENT prebuilt-assets
+        )
