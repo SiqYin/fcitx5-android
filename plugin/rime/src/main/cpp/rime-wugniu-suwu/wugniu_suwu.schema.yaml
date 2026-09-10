@@ -6,10 +6,12 @@ schema:
   name: 吳語（混合腔）
   version: "2025.08.15"
   author:
+    - 雪螢SiqYin <siqyin@qq.com> (dict & schema)
+    - 基於蘇州吳語注音輸入方案吳語學堂版
+    - 原版作者：
     - 予安 <181065229@qq.com> (dict)
     - 雪心居士 <sihsin@live.com> (schema)
     - Shin Zoqchiuq <shinzoqchiuq@outlook.com> (schema)
-    - 雪螢SiqYin <siqyin@qq.com> (dict & schema)
   description: |
     基於蘇州吳語注音輸入方案吳語學堂版
     https://www.wugniu.com/
