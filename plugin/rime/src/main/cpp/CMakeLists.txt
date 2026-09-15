@@ -89,6 +89,6 @@ install(FILES
         "rime-wugniu-suwu/opencc/TSCharacters.ocd2"
         "rime-wugniu-suwu/opencc/TSPhrases.ocd"
         "rime-wugniu-suwu/opencc/TSPhrases.ocd2"
-        DESTINATION "${FCITX_INSTALL_DATADIR}/rime-data/opencc"
+        DESTINATION "${FCITX_INSTALL_DATADIR}/opencc"
         COMPONENT prebuilt-assets
         )
