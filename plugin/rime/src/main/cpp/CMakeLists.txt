@@ -75,6 +75,9 @@ install(FILES
         )
 
 # wugniu_suwu OpenCC config files
+# NOTE: TSCharacters.ocd2 / TSPhrases.ocd2 由本体提供（usr/share/opencc），
+#       插件重复安装会与 Main 的路径冲突，导致整个插件数据被跳过（Rime 无法加载）。
+#       本体已通过符号链接 usr/share/rime-data/opencc -> usr/share/opencc 提供给 rime 使用。
 install(FILES
         "rime-wugniu-suwu/opencc/s2sy.json"
         "rime-wugniu-suwu/opencc/s2wy.json"
@@ -86,9 +89,7 @@ install(FILES
         "rime-wugniu-suwu/opencc/TSCharacters.txt"
         "rime-wugniu-suwu/opencc/TSPhrases.txt"
         "rime-wugniu-suwu/opencc/TSCharacters.ocd"
-        "rime-wugniu-suwu/opencc/TSCharacters.ocd2"
         "rime-wugniu-suwu/opencc/TSPhrases.ocd"
-        "rime-wugniu-suwu/opencc/TSPhrases.ocd2"
         DESTINATION "${FCITX_INSTALL_DATADIR}/opencc"
         COMPONENT prebuilt-assets
         )
