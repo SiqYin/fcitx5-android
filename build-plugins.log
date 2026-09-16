@@ -1,0 +1,1032 @@
+> Task :build-logic:convention:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:convention:compileKotlin UP-TO-DATE
+> Task :build-logic:convention:compileJava NO-SOURCE
+> Task :build-logic:convention:pluginDescriptors UP-TO-DATE
+> Task :build-logic:convention:processResources UP-TO-DATE
+> Task :build-logic:convention:classes UP-TO-DATE
+> Task :build-logic:convention:jar UP-TO-DATE
+> Task :lib:common:preBuild UP-TO-DATE
+> Task :lib:common:preReleaseBuild UP-TO-DATE
+> Task :lib:common:prepareReleaseArtProfile SKIPPED
+> Task :lib:fcitx5:preBuild UP-TO-DATE
+> Task :lib:fcitx5:preReleaseBuild UP-TO-DATE
+> Task :lib:fcitx5:prepareReleaseArtProfile SKIPPED
+> Task :lib:plugin-base:preBuild UP-TO-DATE
+> Task :lib:plugin-base:preReleaseBuild UP-TO-DATE
+> Task :lib:plugin-base:prepareReleaseArtProfile SKIPPED
+> Task :plugin:anthy:preBuild UP-TO-DATE
+> Task :plugin:anthy:preReleaseBuild UP-TO-DATE
+> Task :plugin:anthy:mergeReleaseArtProfile SKIPPED
+> Task :plugin:anthy:expandReleaseL8ArtProfileWildcards SKIPPED
+> Task :lib:fcitx5:generateReleaseResources UP-TO-DATE
+> Task :lib:fcitx5:packageReleaseResources UP-TO-DATE
+> Task :lib:fcitx5:processReleaseNavigationResources UP-TO-DATE
+> Task :lib:fcitx5:parseReleaseLocalResources UP-TO-DATE
+> Task :lib:fcitx5:generateReleaseRFile UP-TO-DATE
+> Task :lib:fcitx5:compileReleaseKotlin NO-SOURCE
+> Task :lib:fcitx5:javaPreCompileRelease UP-TO-DATE
+> Task :lib:fcitx5:compileReleaseJavaWithJavac NO-SOURCE
+> Task :lib:fcitx5:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :lib:fcitx5:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:common:compileReleaseAidl UP-TO-DATE
+> Task :lib:common:generateReleaseResources UP-TO-DATE
+> Task :lib:common:packageReleaseResources UP-TO-DATE
+> Task :lib:common:processReleaseNavigationResources UP-TO-DATE
+> Task :lib:common:parseReleaseLocalResources UP-TO-DATE
+> Task :lib:common:generateReleaseRFile UP-TO-DATE
+> Task :lib:common:compileReleaseKotlin UP-TO-DATE
+> Task :lib:common:javaPreCompileRelease UP-TO-DATE
+> Task :lib:common:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :lib:common:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :lib:plugin-base:generateReleaseResources
+> Task :lib:plugin-base:packageReleaseResources
+> Task :lib:plugin-base:processReleaseNavigationResources
+> Task :lib:common:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :lib:common:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:plugin-base:javaPreCompileRelease
+> Task :lib:common:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :lib:plugin-base:parseReleaseLocalResources
+> Task :lib:fcitx5:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :lib:fcitx5:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :lib:plugin-base:generateReleaseRFile
+> Task :plugin:anthy:checkReleaseDuplicateClasses
+> Task :plugin:anthy:generateReleaseBuildConfig
+> Task :plugin:anthy:generateReleaseResValues
+> Task :plugin:anthy:generateReleaseResources
+> Task :plugin:anthy:prepareLibraryDefinitionsRelease
+> Task :plugin:anthy:packageReleaseResources
+> Task :plugin:anthy:processReleaseNavigationResources
+> Task :lib:common:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :plugin:anthy:javaPreCompileRelease
+> Task :lib:common:compileReleaseLibraryResources UP-TO-DATE
+> Task :lib:fcitx5:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :lib:fcitx5:compileReleaseLibraryResources UP-TO-DATE
+> Task :lib:plugin-base:mapReleaseSourceSetPaths
+> Task :plugin:anthy:parseReleaseLocalResources
+> Task :lib:common:writeReleaseAarMetadata UP-TO-DATE
+> Task :lib:fcitx5:writeReleaseAarMetadata UP-TO-DATE
+> Task :plugin:anthy:generateReleaseRFile
+> Task :lib:plugin-base:writeReleaseAarMetadata
+> Task :lib:plugin-base:compileReleaseLibraryResources
+> Task :plugin:anthy:mapReleaseSourceSetPaths
+> Task :plugin:anthy:checkReleaseAarMetadata
+> Task :plugin:anthy:compileReleaseNavigationResources
+> Task :plugin:anthy:createReleaseCompatibleScreenManifests
+> Task :lib:common:extractDeepLinksRelease UP-TO-DATE
+> Task :lib:common:processReleaseManifest UP-TO-DATE
+> Task :lib:fcitx5:extractDeepLinksRelease UP-TO-DATE
+> Task :lib:fcitx5:processReleaseManifest UP-TO-DATE
+> Task :lib:plugin-base:extractDeepLinksRelease
+> Task :plugin:anthy:extractDeepLinksRelease
+> Task :lib:plugin-base:processReleaseManifest
+> Task :plugin:anthy:extractProguardFiles
+> Task :plugin:anthy:mergeReleaseResources
+> Task :plugin:anthy:processReleaseMainManifest
+> Task :plugin:anthy:processReleaseManifest
+> Task :lib:common:processReleaseJavaRes UP-TO-DATE
+> Task :lib:fcitx5:processReleaseJavaRes NO-SOURCE
+> Task :plugin:anthy:mergeReleaseStartupProfile
+> Task :lib:common:generateReleaseAssets UP-TO-DATE
+> Task :lib:common:mergeReleaseAssets UP-TO-DATE
+> Task :lib:fcitx5:generateReleaseAssets UP-TO-DATE
+> Task :lib:fcitx5:mergeReleaseAssets UP-TO-DATE
+> Task :lib:plugin-base:generateReleaseAssets UP-TO-DATE
+> Task :lib:plugin-base:mergeReleaseAssets
+> Task :plugin:anthy:deleteFcitxComponentExcludeFiles UP-TO-DATE
+> Task :lib:fcitx5:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :lib:fcitx5:buildCMakeRelWithDebInfo[arm64-v8a][Fcitx5Config,Fcitx5Core,etc]
+> Task :lib:fcitx5:configureCMakeRelWithDebInfo[armeabi-v7a]
+> Task :lib:fcitx5:buildCMakeRelWithDebInfo[armeabi-v7a][Fcitx5Config,Fcitx5Core,etc]
+> Task :lib:fcitx5:configureCMakeRelWithDebInfo[x86]
+> Task :lib:fcitx5:buildCMakeRelWithDebInfo[x86][Fcitx5Config,Fcitx5Core,etc]
+> Task :lib:fcitx5:configureCMakeRelWithDebInfo[x86_64]
+> Task :lib:fcitx5:buildCMakeRelWithDebInfo[x86_64][Fcitx5Config,Fcitx5Core,etc]
+> Task :plugin:anthy:processReleaseManifestForPackage
+> Task :lib:fcitx5:externalNativeBuildRelease
+> Task :lib:fcitx5:generateJsonModelRelease
+> Task :lib:fcitx5:installFcitxDevelComponent
+> Task :lib:fcitx5:installFcitxHeaders
+> Task :lib:fcitx5:prefabReleaseConfigurePackage
+> Task :plugin:anthy:processReleaseResources
+> Task :lib:plugin-base:compileReleaseKotlin
+
+> Task :plugin:anthy:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Deprecation Warning at fcitx5-anthy/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :lib:plugin-base:compileReleaseJavaWithJavac NO-SOURCE
+> Task :lib:plugin-base:mergeReleaseGeneratedProguardFiles
+> Task :lib:plugin-base:exportReleaseConsumerProguardFiles
+> Task :lib:plugin-base:bundleLibCompileToJarRelease
+> Task :lib:plugin-base:bundleLibRuntimeToJarRelease
+> Task :plugin:anthy:compileReleaseKotlin NO-SOURCE
+> Task :plugin:anthy:compileReleaseJavaWithJavac
+> Task :plugin:anthy:expandReleaseArtProfileWildcards SKIPPED
+> Task :plugin:anthy:mergeReleaseGeneratedProguardFiles
+> Task :lib:plugin-base:processReleaseJavaRes
+> Task :plugin:anthy:processReleaseJavaRes NO-SOURCE
+> Task :plugin:anthy:mergeReleaseJavaResource
+
+> Task :plugin:anthy:configureCMakeRelWithDebInfo[armeabi-v7a]
+C/C++: CMake Deprecation Warning at fcitx5-anthy/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:anthy:configureCMakeRelWithDebInfo[x86]
+C/C++: CMake Deprecation Warning at fcitx5-anthy/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:anthy:minifyReleaseWithR8
+
+> Task :plugin:anthy:configureCMakeRelWithDebInfo[x86_64]
+C/C++: CMake Deprecation Warning at fcitx5-anthy/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:anthy:installProjectConfig
+> Task :plugin:anthy:installProjectPrebuiltAssets
+> Task :plugin:anthy:installProjectTranslation
+> Task :plugin:anthy:installFcitxComponent
+> Task :plugin:anthy:generateDataDescriptor
+> Task :plugin:anthy:generateReleaseAssets UP-TO-DATE
+> Task :plugin:anthy:mergeReleaseAssets
+> Task :lib:common:extractProguardFiles UP-TO-DATE
+> Task :lib:common:generateReleaseLintVitalModel UP-TO-DATE
+> Task :lib:common:lintVitalAnalyzeRelease UP-TO-DATE
+> Task :lib:common:prepareLintJarForPublish UP-TO-DATE
+> Task :lib:fcitx5:extractProguardFiles UP-TO-DATE
+> Task :lib:fcitx5:generateReleaseLintVitalModel UP-TO-DATE
+> Task :lib:fcitx5:lintVitalAnalyzeRelease UP-TO-DATE
+> Task :lib:fcitx5:prepareLintJarForPublish UP-TO-DATE
+> Task :lib:common:createFullJarRelease UP-TO-DATE
+> Task :lib:common:generateReleaseLintModel UP-TO-DATE
+> Task :lib:plugin-base:extractProguardFiles
+> Task :lib:plugin-base:generateReleaseLintVitalModel
+> Task :lib:common:checkReleaseAarMetadata UP-TO-DATE
+> Task :lib:common:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :lib:common:mergeReleaseNativeLibs NO-SOURCE
+> Task :lib:common:stripReleaseDebugSymbols NO-SOURCE
+> Task :lib:common:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :lib:common:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :lib:common:extractReleaseAnnotations UP-TO-DATE
+> Task :lib:common:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:common:mergeReleaseJavaResource UP-TO-DATE
+> Task :lib:common:syncReleaseLibJars UP-TO-DATE
+> Task :lib:common:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :lib:common:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :lib:plugin-base:prepareLintJarForPublish
+> Task :lib:fcitx5:createFullJarRelease UP-TO-DATE
+> Task :lib:fcitx5:generateReleaseLintModel UP-TO-DATE
+> Task :lib:plugin-base:createFullJarRelease
+> Task :lib:plugin-base:generateReleaseLintModel
+> Task :plugin:anthy:generateReleaseLintVitalReportModel
+> Task :lib:fcitx5:checkReleaseAarMetadata UP-TO-DATE
+> Task :lib:fcitx5:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :lib:fcitx5:mergeReleaseNativeLibs UP-TO-DATE
+> Task :lib:fcitx5:stripReleaseDebugSymbols NO-SOURCE
+> Task :lib:fcitx5:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :lib:fcitx5:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :lib:fcitx5:extractReleaseAnnotations UP-TO-DATE
+> Task :lib:fcitx5:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:fcitx5:prefabReleasePackage UP-TO-DATE
+> Task :lib:fcitx5:mergeReleaseJavaResource UP-TO-DATE
+> Task :lib:fcitx5:syncReleaseLibJars UP-TO-DATE
+> Task :lib:fcitx5:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :lib:plugin-base:checkReleaseAarMetadata
+> Task :lib:plugin-base:mergeReleaseJniLibFolders
+> Task :lib:plugin-base:mergeReleaseNativeLibs NO-SOURCE
+> Task :lib:plugin-base:stripReleaseDebugSymbols NO-SOURCE
+> Task :lib:plugin-base:copyReleaseJniLibsProjectAndLocalJars
+> Task :lib:plugin-base:extractDeepLinksForAarRelease
+> Task :lib:plugin-base:extractReleaseAnnotations
+> Task :lib:plugin-base:mergeReleaseConsumerProguardFiles
+> Task :lib:plugin-base:mergeReleaseJavaResource
+> Task :lib:plugin-base:syncReleaseLibJars
+> Task :lib:plugin-base:bundleReleaseLocalLintAar
+> Task :lib:fcitx5:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :lib:plugin-base:writeReleaseLintModelMetadata
+> Task :plugin:anthy:convertShrunkResourcesToBinaryRelease
+> Task :plugin:anthy:optimizeReleaseResources
+> Task :lib:common:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :lib:fcitx5:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :lib:plugin-base:copyReleaseJniLibsProjectOnly
+> Task :lib:plugin-base:lintVitalAnalyzeRelease
+> Task :plugin:anthy:compressReleaseAssets
+> Task :plugin:anthy:l8DexDesugarLibRelease
+
+> Task :plugin:anthy:buildCMakeRelWithDebInfo[arm64-v8a][anthy]
+C/C++: ninja: Entering directory `/home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/.cxx/RelWithDebInfo/4729l1we/arm64-v8a'
+C/C++: In file included from /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/key2kana_table.cpp:9:
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/key2kana_table.h:124:35: warning: private field 'additionalTable_' is not used [-Wunused-private-field]
+C/C++:   124 |     std::vector<Key2KanaTable *> *additionalTable_;
+C/C++:       |                                   ^
+C/C++: 1 warning generated.
+C/C++: In file included from /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/state.cpp:15:
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/state.h:180:15: warning: private field 'prevInputMode_' is not used [-Wunused-private-field]
+C/C++:   180 |     InputMode prevInputMode_;
+C/C++:       |               ^
+C/C++: 1 warning generated.
+
+> Task :plugin:anthy:compileReleaseArtProfile SKIPPED
+> Task :plugin:anthy:lintVitalAnalyzeRelease
+
+> Task :plugin:anthy:buildCMakeRelWithDebInfo[armeabi-v7a][anthy]
+C/C++: ninja: Entering directory `/home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/.cxx/RelWithDebInfo/4729l1we/armeabi-v7a'
+C/C++: In file included from /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/key2kana_table.cpp:9:
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/key2kana_table.h:124:35: warning: private field 'additionalTable_' is not used [-Wunused-private-field]
+C/C++:   124 |     std::vector<Key2KanaTable *> *additionalTable_;
+C/C++:       |                                   ^
+C/C++: 1 warning generated.
+C/C++: In file included from /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/state.cpp:15:
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/state.h:180:15: warning: private field 'prevInputMode_' is not used [-Wunused-private-field]
+C/C++:   180 |     InputMode prevInputMode_;
+C/C++:       |               ^
+C/C++: 1 warning generated.
+
+> Task :plugin:anthy:lintVitalReportRelease
+
+> Task :plugin:anthy:buildCMakeRelWithDebInfo[x86][anthy]
+C/C++: ninja: Entering directory `/home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/.cxx/RelWithDebInfo/4729l1we/x86'
+C/C++: In file included from /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/key2kana_table.cpp:9:
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/key2kana_table.h:124:35: warning: private field 'additionalTable_' is not used [-Wunused-private-field]
+C/C++:   124 |     std::vector<Key2KanaTable *> *additionalTable_;
+C/C++:       |                                   ^
+C/C++: 1 warning generated.
+C/C++: In file included from /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/state.cpp:15:
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/state.h:180:15: warning: private field 'prevInputMode_' is not used [-Wunused-private-field]
+C/C++:   180 |     InputMode prevInputMode_;
+C/C++:       |               ^
+C/C++: 1 warning generated.
+
+> Task :plugin:anthy:lintVitalRelease
+
+> Task :plugin:anthy:buildCMakeRelWithDebInfo[x86_64][anthy]
+C/C++: ninja: Entering directory `/home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/.cxx/RelWithDebInfo/4729l1we/x86_64'
+C/C++: In file included from /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/key2kana_table.cpp:9:
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/key2kana_table.h:124:35: warning: private field 'additionalTable_' is not used [-Wunused-private-field]
+C/C++:   124 |     std::vector<Key2KanaTable *> *additionalTable_;
+C/C++:       |                                   ^
+C/C++: 1 warning generated.
+C/C++: In file included from /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/state.cpp:15:
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/anthy/src/main/cpp/fcitx5-anthy/src/state.h:180:15: warning: private field 'prevInputMode_' is not used [-Wunused-private-field]
+C/C++:   180 |     InputMode prevInputMode_;
+C/C++:       |               ^
+C/C++: 1 warning generated.
+
+> Task :plugin:anthy:mergeReleaseJniLibFolders
+> Task :plugin:anthy:validateSigningRelease
+> Task :plugin:anthy:writeReleaseAppMetadata
+> Task :plugin:anthy:writeReleaseSigningConfigVersions
+> Task :plugin:chewing:preBuild UP-TO-DATE
+> Task :plugin:chewing:preReleaseBuild UP-TO-DATE
+> Task :plugin:chewing:mergeReleaseArtProfile SKIPPED
+> Task :plugin:chewing:expandReleaseL8ArtProfileWildcards SKIPPED
+> Task :plugin:chewing:checkReleaseDuplicateClasses
+> Task :plugin:chewing:generateReleaseBuildConfig
+> Task :plugin:chewing:generateReleaseResValues
+> Task :plugin:chewing:generateReleaseResources
+> Task :plugin:anthy:mergeReleaseNativeLibs
+> Task :plugin:chewing:prepareLibraryDefinitionsRelease
+> Task :plugin:chewing:packageReleaseResources
+> Task :plugin:chewing:processReleaseNavigationResources
+> Task :plugin:chewing:javaPreCompileRelease
+> Task :plugin:chewing:parseReleaseLocalResources
+> Task :plugin:anthy:stripReleaseDebugSymbols
+> Task :plugin:chewing:checkReleaseAarMetadata
+> Task :plugin:chewing:mapReleaseSourceSetPaths
+> Task :plugin:chewing:generateReleaseRFile
+> Task :plugin:chewing:compileReleaseKotlin NO-SOURCE
+> Task :plugin:chewing:compileReleaseNavigationResources
+> Task :plugin:anthy:extractReleaseNativeSymbolTables
+> Task :plugin:chewing:compileReleaseJavaWithJavac
+> Task :plugin:chewing:mergeReleaseResources
+> Task :plugin:anthy:packageRelease
+> Task :plugin:anthy:generateBuildMetadataRelease
+> Task :plugin:anthy:createReleaseApkListingFileRedirect
+> Task :plugin:chewing:createReleaseCompatibleScreenManifests
+> Task :plugin:chewing:extractDeepLinksRelease
+> Task :plugin:chewing:processReleaseMainManifest
+> Task :plugin:chewing:processReleaseManifest
+> Task :plugin:chewing:extractProguardFiles
+> Task :plugin:chewing:processReleaseManifestForPackage
+> Task :plugin:chewing:processReleaseJavaRes NO-SOURCE
+> Task :plugin:chewing:mergeReleaseStartupProfile
+> Task :plugin:chewing:deleteFcitxComponentExcludeFiles UP-TO-DATE
+> Task :plugin:chewing:mergeReleaseJavaResource
+> Task :plugin:anthy:mergeReleaseNativeDebugMetadata
+> Task :plugin:chewing:processReleaseResources
+
+> Task :plugin:chewing:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Deprecation Warning at fcitx5-chewing/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+C/C++: chewing
+
+> Task :plugin:anthy:assembleRelease
+> Task :plugin:chewing:expandReleaseArtProfileWildcards SKIPPED
+> Task :plugin:chewing:mergeReleaseGeneratedProguardFiles
+
+> Task :plugin:chewing:configureCMakeRelWithDebInfo[armeabi-v7a]
+C/C++: CMake Deprecation Warning at fcitx5-chewing/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+C/C++: chewing
+
+> Task :plugin:chewing:minifyReleaseWithR8
+
+> Task :plugin:chewing:configureCMakeRelWithDebInfo[x86]
+C/C++: CMake Deprecation Warning at fcitx5-chewing/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+C/C++: chewing
+
+> Task :plugin:chewing:configureCMakeRelWithDebInfo[x86_64]
+C/C++: CMake Deprecation Warning at fcitx5-chewing/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+C/C++: chewing
+
+> Task :plugin:chewing:installProjectConfig
+> Task :plugin:chewing:installProjectPrebuiltAssets
+> Task :plugin:chewing:installProjectTranslation
+> Task :plugin:chewing:installFcitxComponent
+> Task :plugin:chewing:generateDataDescriptor
+> Task :plugin:chewing:generateReleaseAssets UP-TO-DATE
+> Task :plugin:chewing:mergeReleaseAssets
+> Task :plugin:chewing:generateReleaseLintVitalReportModel
+> Task :plugin:chewing:convertShrunkResourcesToBinaryRelease
+> Task :plugin:chewing:optimizeReleaseResources
+> Task :plugin:chewing:lintVitalAnalyzeRelease
+> Task :plugin:chewing:compressReleaseAssets
+> Task :plugin:chewing:l8DexDesugarLibRelease
+> Task :plugin:chewing:buildCMakeRelWithDebInfo[arm64-v8a][chewing]
+> Task :plugin:chewing:compileReleaseArtProfile SKIPPED
+> Task :plugin:chewing:lintVitalReportRelease
+> Task :plugin:chewing:buildCMakeRelWithDebInfo[armeabi-v7a][chewing]
+> Task :plugin:chewing:lintVitalRelease
+> Task :plugin:chewing:buildCMakeRelWithDebInfo[x86][chewing]
+> Task :plugin:chewing:buildCMakeRelWithDebInfo[x86_64][chewing]
+> Task :plugin:chewing:mergeReleaseJniLibFolders
+> Task :plugin:chewing:validateSigningRelease
+> Task :plugin:chewing:writeReleaseAppMetadata
+> Task :plugin:chewing:writeReleaseSigningConfigVersions
+> Task :plugin:clipboard-filter:preBuild UP-TO-DATE
+> Task :plugin:clipboard-filter:preReleaseBuild UP-TO-DATE
+> Task :plugin:clipboard-filter:mergeReleaseArtProfile SKIPPED
+> Task :plugin:clipboard-filter:expandReleaseL8ArtProfileWildcards SKIPPED
+> Task :plugin:clipboard-filter:checkReleaseDuplicateClasses
+> Task :plugin:clipboard-filter:generateReleaseBuildConfig
+> Task :plugin:clipboard-filter:generateReleaseResValues
+> Task :plugin:clipboard-filter:generateReleaseResources
+> Task :plugin:chewing:mergeReleaseNativeLibs
+> Task :plugin:clipboard-filter:prepareLibraryDefinitionsRelease
+> Task :plugin:clipboard-filter:packageReleaseResources
+> Task :plugin:clipboard-filter:processReleaseNavigationResources
+> Task :plugin:clipboard-filter:javaPreCompileRelease
+> Task :plugin:chewing:stripReleaseDebugSymbols
+> Task :plugin:clipboard-filter:parseReleaseLocalResources
+> Task :plugin:clipboard-filter:checkReleaseAarMetadata
+> Task :plugin:clipboard-filter:mapReleaseSourceSetPaths
+> Task :plugin:clipboard-filter:compileReleaseNavigationResources
+> Task :plugin:clipboard-filter:generateReleaseRFile
+> Task :plugin:chewing:extractReleaseNativeSymbolTables
+> Task :plugin:clipboard-filter:mergeReleaseResources
+> Task :plugin:chewing:packageRelease
+> Task :plugin:chewing:generateBuildMetadataRelease
+> Task :plugin:chewing:createReleaseApkListingFileRedirect
+> Task :plugin:clipboard-filter:createReleaseCompatibleScreenManifests
+> Task :plugin:clipboard-filter:extractDeepLinksRelease
+> Task :plugin:clipboard-filter:processReleaseMainManifest
+> Task :plugin:clipboard-filter:processReleaseManifest
+> Task :plugin:clipboard-filter:processReleaseManifestForPackage
+> Task :plugin:clipboard-filter:extractProguardFiles
+> Task :plugin:clipboard-filter:mergeReleaseStartupProfile
+> Task :plugin:clipboard-filter:generateDataDescriptor
+> Task :plugin:clipboard-filter:generateReleaseAssets UP-TO-DATE
+> Task :plugin:clipboard-filter:mergeReleaseAssets
+> Task :plugin:clipboard-filter:processReleaseResources
+> Task :plugin:clipboard-filter:compressReleaseAssets
+> Task :plugin:clipboard-filter:mergeReleaseJniLibFolders
+> Task :plugin:clipboard-filter:mergeReleaseNativeLibs NO-SOURCE
+> Task :plugin:clipboard-filter:stripReleaseDebugSymbols NO-SOURCE
+> Task :plugin:clipboard-filter:validateSigningRelease
+> Task :plugin:clipboard-filter:writeReleaseAppMetadata
+> Task :plugin:clipboard-filter:writeReleaseSigningConfigVersions
+> Task :plugin:clipboard-filter:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :plugin:clipboard-filter:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :plugin:hangul:preBuild UP-TO-DATE
+> Task :plugin:hangul:preReleaseBuild UP-TO-DATE
+> Task :plugin:hangul:mergeReleaseArtProfile SKIPPED
+> Task :plugin:hangul:expandReleaseL8ArtProfileWildcards SKIPPED
+> Task :plugin:hangul:checkReleaseDuplicateClasses
+> Task :plugin:hangul:generateReleaseBuildConfig
+> Task :plugin:hangul:generateReleaseResValues
+> Task :plugin:hangul:generateReleaseResources
+> Task :plugin:hangul:prepareLibraryDefinitionsRelease
+> Task :plugin:hangul:packageReleaseResources
+> Task :plugin:hangul:processReleaseNavigationResources
+> Task :plugin:hangul:javaPreCompileRelease
+> Task :plugin:hangul:checkReleaseAarMetadata
+> Task :plugin:hangul:parseReleaseLocalResources
+> Task :plugin:hangul:mapReleaseSourceSetPaths
+> Task :plugin:hangul:compileReleaseNavigationResources
+> Task :plugin:hangul:generateReleaseRFile
+> Task :plugin:hangul:compileReleaseKotlin NO-SOURCE
+> Task :plugin:chewing:mergeReleaseNativeDebugMetadata
+> Task :plugin:hangul:mergeReleaseResources
+> Task :plugin:hangul:compileReleaseJavaWithJavac
+> Task :plugin:chewing:assembleRelease
+> Task :plugin:hangul:createReleaseCompatibleScreenManifests
+> Task :plugin:hangul:extractDeepLinksRelease
+> Task :plugin:hangul:processReleaseMainManifest
+> Task :plugin:hangul:processReleaseManifest
+> Task :plugin:hangul:extractProguardFiles
+> Task :plugin:hangul:processReleaseJavaRes NO-SOURCE
+> Task :plugin:hangul:mergeReleaseStartupProfile
+> Task :plugin:hangul:deleteFcitxComponentExcludeFiles UP-TO-DATE
+> Task :plugin:hangul:mergeReleaseJavaResource
+
+> Task :plugin:hangul:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Deprecation Warning at fcitx5-hangul/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:hangul:configureCMakeRelWithDebInfo[armeabi-v7a]
+C/C++: CMake Deprecation Warning at fcitx5-hangul/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:hangul:configureCMakeRelWithDebInfo[x86]
+C/C++: CMake Deprecation Warning at fcitx5-hangul/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:hangul:configureCMakeRelWithDebInfo[x86_64]
+C/C++: CMake Deprecation Warning at fcitx5-hangul/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:hangul:installProjectConfig
+> Task :plugin:hangul:installProjectPrebuiltAssets
+> Task :plugin:hangul:installProjectTranslation
+> Task :plugin:hangul:installFcitxComponent
+> Task :plugin:hangul:generateDataDescriptor
+> Task :plugin:hangul:generateReleaseAssets UP-TO-DATE
+> Task :plugin:hangul:mergeReleaseAssets
+> Task :plugin:clipboard-filter:compileReleaseKotlin
+> Task :plugin:clipboard-filter:compileReleaseJavaWithJavac
+> Task :plugin:clipboard-filter:expandReleaseArtProfileWildcards SKIPPED
+> Task :plugin:clipboard-filter:mergeReleaseGeneratedProguardFiles
+> Task :plugin:clipboard-filter:processReleaseJavaRes
+> Task :plugin:hangul:processReleaseManifestForPackage
+> Task :plugin:clipboard-filter:generateReleaseLintVitalReportModel
+> Task :plugin:clipboard-filter:mergeReleaseJavaResource
+> Task :plugin:hangul:compressReleaseAssets
+> Task :plugin:hangul:processReleaseResources
+> Task :plugin:hangul:generateReleaseLintVitalReportModel
+> Task :plugin:hangul:expandReleaseArtProfileWildcards SKIPPED
+> Task :plugin:hangul:mergeReleaseGeneratedProguardFiles
+> Task :plugin:clipboard-filter:lintVitalAnalyzeRelease
+> Task :plugin:hangul:lintVitalAnalyzeRelease
+> Task :plugin:clipboard-filter:minifyReleaseWithR8
+> Task :plugin:hangul:buildCMakeRelWithDebInfo[arm64-v8a][hangul]
+> Task :plugin:clipboard-filter:lintVitalReportRelease
+> Task :plugin:clipboard-filter:lintVitalRelease
+> Task :plugin:clipboard-filter:convertShrunkResourcesToBinaryRelease
+> Task :plugin:hangul:lintVitalReportRelease
+> Task :plugin:hangul:lintVitalRelease
+> Task :plugin:hangul:minifyReleaseWithR8
+> Task :plugin:hangul:buildCMakeRelWithDebInfo[armeabi-v7a][hangul]
+> Task :plugin:clipboard-filter:optimizeReleaseResources
+> Task :plugin:hangul:l8DexDesugarLibRelease
+> Task :plugin:hangul:buildCMakeRelWithDebInfo[x86][hangul]
+> Task :plugin:hangul:compileReleaseArtProfile SKIPPED
+> Task :plugin:hangul:convertShrunkResourcesToBinaryRelease
+> Task :plugin:clipboard-filter:l8DexDesugarLibRelease
+> Task :plugin:hangul:buildCMakeRelWithDebInfo[x86_64][hangul]
+> Task :plugin:clipboard-filter:compileReleaseArtProfile SKIPPED
+> Task :plugin:hangul:mergeReleaseJniLibFolders
+> Task :plugin:hangul:validateSigningRelease
+> Task :plugin:hangul:writeReleaseAppMetadata
+> Task :plugin:hangul:writeReleaseSigningConfigVersions
+> Task :plugin:hangul:mergeReleaseNativeLibs
+> Task :plugin:hangul:optimizeReleaseResources
+> Task :lib:fcitx5-chinese-addons:preBuild UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:preReleaseBuild UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:prepareReleaseArtProfile SKIPPED
+> Task :lib:fcitx5-lua:preBuild UP-TO-DATE
+> Task :lib:fcitx5-lua:preReleaseBuild UP-TO-DATE
+> Task :lib:fcitx5-lua:prepareReleaseArtProfile SKIPPED
+> Task :lib:libime:preBuild UP-TO-DATE
+> Task :lib:libime:preReleaseBuild UP-TO-DATE
+> Task :lib:libime:prepareReleaseArtProfile SKIPPED
+> Task :plugin:jyutping:preBuild UP-TO-DATE
+> Task :plugin:jyutping:preReleaseBuild UP-TO-DATE
+> Task :plugin:jyutping:mergeReleaseArtProfile SKIPPED
+> Task :plugin:jyutping:expandReleaseL8ArtProfileWildcards SKIPPED
+> Task :lib:fcitx5-chinese-addons:generateReleaseResources UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:packageReleaseResources UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:processReleaseNavigationResources UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:parseReleaseLocalResources UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:generateReleaseRFile UP-TO-DATE
+> Task :lib:fcitx5-lua:generateReleaseResources UP-TO-DATE
+> Task :lib:fcitx5-lua:packageReleaseResources UP-TO-DATE
+> Task :lib:fcitx5-lua:processReleaseNavigationResources UP-TO-DATE
+> Task :lib:fcitx5-lua:parseReleaseLocalResources UP-TO-DATE
+> Task :lib:fcitx5-lua:generateReleaseRFile UP-TO-DATE
+> Task :lib:fcitx5-lua:compileReleaseKotlin NO-SOURCE
+> Task :lib:fcitx5-lua:javaPreCompileRelease UP-TO-DATE
+> Task :lib:fcitx5-lua:compileReleaseJavaWithJavac NO-SOURCE
+> Task :lib:fcitx5-lua:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :lib:libime:generateReleaseResources UP-TO-DATE
+> Task :lib:libime:packageReleaseResources UP-TO-DATE
+> Task :lib:libime:processReleaseNavigationResources UP-TO-DATE
+> Task :plugin:hangul:stripReleaseDebugSymbols
+> Task :lib:libime:parseReleaseLocalResources UP-TO-DATE
+> Task :plugin:clipboard-filter:packageRelease
+> Task :plugin:hangul:extractReleaseNativeSymbolTables
+> Task :plugin:hangul:packageRelease
+> Task :plugin:clipboard-filter:generateBuildMetadataRelease
+> Task :plugin:clipboard-filter:createReleaseApkListingFileRedirect
+> Task :plugin:clipboard-filter:assembleRelease
+> Task :plugin:hangul:generateBuildMetadataRelease
+> Task :plugin:hangul:createReleaseApkListingFileRedirect
+> Task :lib:libime:generateReleaseRFile UP-TO-DATE
+> Task :lib:libime:compileReleaseKotlin NO-SOURCE
+> Task :lib:libime:javaPreCompileRelease UP-TO-DATE
+> Task :lib:libime:compileReleaseJavaWithJavac NO-SOURCE
+> Task :lib:libime:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:compileReleaseKotlin NO-SOURCE
+> Task :lib:fcitx5-chinese-addons:javaPreCompileRelease UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:compileReleaseJavaWithJavac NO-SOURCE
+> Task :lib:fcitx5-chinese-addons:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:libime:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :lib:libime:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:fcitx5-lua:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :lib:fcitx5-lua:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :lib:fcitx5-lua:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :lib:libime:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :plugin:jyutping:checkReleaseDuplicateClasses
+> Task :plugin:jyutping:generateReleaseBuildConfig
+> Task :plugin:jyutping:generateReleaseResValues
+> Task :plugin:hangul:mergeReleaseNativeDebugMetadata
+> Task :plugin:jyutping:generateReleaseResources
+> Task :plugin:hangul:assembleRelease
+> Task :plugin:jyutping:prepareLibraryDefinitionsRelease
+> Task :plugin:jyutping:packageReleaseResources
+> Task :plugin:jyutping:processReleaseNavigationResources
+> Task :lib:fcitx5-chinese-addons:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:compileReleaseLibraryResources UP-TO-DATE
+> Task :plugin:jyutping:javaPreCompileRelease
+> Task :lib:fcitx5-lua:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :lib:fcitx5-lua:compileReleaseLibraryResources UP-TO-DATE
+> Task :plugin:jyutping:parseReleaseLocalResources
+> Task :lib:libime:mapReleaseSourceSetPaths UP-TO-DATE
+> Task :lib:libime:compileReleaseLibraryResources UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:writeReleaseAarMetadata UP-TO-DATE
+> Task :plugin:jyutping:generateReleaseRFile
+> Task :lib:fcitx5-lua:writeReleaseAarMetadata UP-TO-DATE
+> Task :plugin:jyutping:compileReleaseKotlin NO-SOURCE
+> Task :plugin:jyutping:compileReleaseJavaWithJavac
+> Task :lib:libime:writeReleaseAarMetadata UP-TO-DATE
+> Task :plugin:jyutping:checkReleaseAarMetadata
+> Task :plugin:jyutping:mapReleaseSourceSetPaths
+> Task :plugin:jyutping:compileReleaseNavigationResources
+> Task :plugin:jyutping:createReleaseCompatibleScreenManifests
+> Task :lib:fcitx5-chinese-addons:extractDeepLinksRelease UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:processReleaseManifest UP-TO-DATE
+> Task :lib:fcitx5-lua:extractDeepLinksRelease UP-TO-DATE
+> Task :lib:fcitx5-lua:processReleaseManifest UP-TO-DATE
+> Task :lib:libime:extractDeepLinksRelease UP-TO-DATE
+> Task :lib:libime:processReleaseManifest UP-TO-DATE
+> Task :plugin:jyutping:extractDeepLinksRelease
+> Task :plugin:jyutping:mergeReleaseResources
+> Task :plugin:jyutping:processReleaseMainManifest
+> Task :plugin:jyutping:processReleaseManifest
+> Task :plugin:jyutping:extractProguardFiles
+> Task :lib:fcitx5-chinese-addons:processReleaseJavaRes NO-SOURCE
+> Task :lib:fcitx5-lua:processReleaseJavaRes NO-SOURCE
+> Task :lib:libime:processReleaseJavaRes NO-SOURCE
+> Task :plugin:jyutping:processReleaseJavaRes NO-SOURCE
+> Task :plugin:jyutping:processReleaseManifestForPackage
+> Task :plugin:jyutping:mergeReleaseStartupProfile
+> Task :lib:fcitx5-chinese-addons:generateReleaseAssets UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:mergeReleaseAssets UP-TO-DATE
+> Task :lib:fcitx5-lua:generateReleaseAssets UP-TO-DATE
+> Task :lib:fcitx5-lua:mergeReleaseAssets UP-TO-DATE
+> Task :lib:libime:generateReleaseAssets UP-TO-DATE
+> Task :lib:libime:mergeReleaseAssets UP-TO-DATE
+> Task :plugin:jyutping:deleteFcitxComponentExcludeFiles UP-TO-DATE
+> Task :lib:fcitx5-lua:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :plugin:jyutping:mergeReleaseJavaResource
+> Task :lib:fcitx5-lua:buildCMakeRelWithDebInfo[arm64-v8a][cmake,luaaddonloader]
+> Task :lib:fcitx5-lua:configureCMakeRelWithDebInfo[armeabi-v7a]
+> Task :lib:fcitx5-lua:buildCMakeRelWithDebInfo[armeabi-v7a][cmake,luaaddonloader]
+> Task :lib:fcitx5-lua:configureCMakeRelWithDebInfo[x86]
+> Task :lib:fcitx5-lua:buildCMakeRelWithDebInfo[x86][cmake,luaaddonloader]
+> Task :lib:fcitx5-lua:configureCMakeRelWithDebInfo[x86_64]
+> Task :lib:fcitx5-lua:buildCMakeRelWithDebInfo[x86_64][cmake,luaaddonloader]
+> Task :lib:fcitx5-lua:externalNativeBuildRelease
+> Task :lib:fcitx5-lua:generateJsonModelRelease
+> Task :lib:fcitx5-lua:installFcitxHeaders
+> Task :lib:fcitx5-lua:prefabReleaseConfigurePackage
+> Task :lib:libime:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :lib:libime:buildCMakeRelWithDebInfo[arm64-v8a][IMECore,IMEPinyin,etc]
+> Task :lib:libime:configureCMakeRelWithDebInfo[armeabi-v7a]
+> Task :lib:libime:buildCMakeRelWithDebInfo[armeabi-v7a][IMECore,IMEPinyin,etc]
+> Task :lib:libime:configureCMakeRelWithDebInfo[x86]
+> Task :lib:libime:buildCMakeRelWithDebInfo[x86][IMECore,IMEPinyin,etc]
+> Task :plugin:jyutping:processReleaseResources
+> Task :lib:libime:configureCMakeRelWithDebInfo[x86_64]
+> Task :plugin:jyutping:expandReleaseArtProfileWildcards SKIPPED
+> Task :plugin:jyutping:mergeReleaseGeneratedProguardFiles
+> Task :lib:libime:buildCMakeRelWithDebInfo[x86_64][IMECore,IMEPinyin,etc]
+> Task :lib:libime:externalNativeBuildRelease
+> Task :lib:libime:generateJsonModelRelease
+> Task :lib:libime:installFcitxHeaders
+> Task :lib:libime:prefabReleaseConfigurePackage
+> Task :lib:fcitx5-chinese-addons:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :lib:fcitx5-lua:prefabReleasePackage UP-TO-DATE
+> Task :lib:libime:prefabReleasePackage UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:buildCMakeRelWithDebInfo[arm64-v8a][chttrans,cmake,etc]
+> Task :lib:fcitx5-chinese-addons:configureCMakeRelWithDebInfo[armeabi-v7a]
+> Task :lib:fcitx5-chinese-addons:buildCMakeRelWithDebInfo[armeabi-v7a][chttrans,cmake,etc]
+> Task :lib:fcitx5-chinese-addons:configureCMakeRelWithDebInfo[x86]
+> Task :lib:fcitx5-chinese-addons:buildCMakeRelWithDebInfo[x86][chttrans,cmake,etc]
+> Task :lib:fcitx5-chinese-addons:configureCMakeRelWithDebInfo[x86_64]
+> Task :lib:fcitx5-chinese-addons:buildCMakeRelWithDebInfo[x86_64][chttrans,cmake,etc]
+> Task :lib:fcitx5-lua:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :lib:fcitx5-lua:mergeReleaseNativeLibs UP-TO-DATE
+> Task :lib:fcitx5-lua:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :lib:libime:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :lib:libime:mergeReleaseNativeLibs UP-TO-DATE
+> Task :lib:libime:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:externalNativeBuildRelease
+> Task :lib:fcitx5-chinese-addons:generateJsonModelRelease
+> Task :lib:fcitx5-chinese-addons:installFcitxHeaders
+> Task :lib:fcitx5-chinese-addons:prefabReleaseConfigurePackage
+> Task :plugin:jyutping:minifyReleaseWithR8
+
+> Task :plugin:jyutping:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Deprecation Warning at libime-jyutping/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+C/C++: pkg_check_modules: ZSTD;REQUIRED;IMPORTED_TARGET;libzstd
+C/C++: CMake Warning (dev) at libime-jyutping/CMakeLists.txt:37 (find_package):
+C/C++:   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+C/C++:   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+C/C++:   set the policy and suppress this warning.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+C/C++: jyutping
+
+> Task :plugin:jyutping:configureCMakeRelWithDebInfo[armeabi-v7a]
+C/C++: CMake Deprecation Warning at libime-jyutping/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+C/C++: pkg_check_modules: ZSTD;REQUIRED;IMPORTED_TARGET;libzstd
+C/C++: CMake Warning (dev) at libime-jyutping/CMakeLists.txt:37 (find_package):
+C/C++:   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+C/C++:   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+C/C++:   set the policy and suppress this warning.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+C/C++: jyutping
+
+> Task :plugin:jyutping:l8DexDesugarLibRelease
+
+> Task :plugin:jyutping:configureCMakeRelWithDebInfo[x86]
+C/C++: CMake Deprecation Warning at libime-jyutping/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+C/C++: pkg_check_modules: ZSTD;REQUIRED;IMPORTED_TARGET;libzstd
+C/C++: CMake Warning (dev) at libime-jyutping/CMakeLists.txt:37 (find_package):
+C/C++:   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+C/C++:   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+C/C++:   set the policy and suppress this warning.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+C/C++: jyutping
+
+> Task :plugin:jyutping:compileReleaseArtProfile SKIPPED
+
+> Task :plugin:jyutping:configureCMakeRelWithDebInfo[x86_64]
+C/C++: CMake Deprecation Warning at libime-jyutping/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+C/C++: pkg_check_modules: ZSTD;REQUIRED;IMPORTED_TARGET;libzstd
+C/C++: CMake Warning (dev) at libime-jyutping/CMakeLists.txt:37 (find_package):
+C/C++:   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+C/C++:   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+C/C++:   set the policy and suppress this warning.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+C/C++: jyutping
+
+> Task :plugin:jyutping:installProjectConfig
+> Task :plugin:jyutping:installProjectPrebuiltAssets
+> Task :plugin:jyutping:installProjectTranslation
+> Task :plugin:jyutping:installFcitxComponent
+> Task :plugin:jyutping:generateDataDescriptor
+> Task :plugin:jyutping:generateReleaseAssets UP-TO-DATE
+> Task :plugin:jyutping:mergeReleaseAssets
+> Task :lib:fcitx5-chinese-addons:extractProguardFiles UP-TO-DATE
+> Task :lib:fcitx5-lua:createFullJarRelease UP-TO-DATE
+> Task :lib:fcitx5-lua:extractProguardFiles UP-TO-DATE
+> Task :lib:fcitx5-lua:generateReleaseLintModel UP-TO-DATE
+> Task :lib:fcitx5-lua:prepareLintJarForPublish UP-TO-DATE
+> Task :lib:libime:createFullJarRelease UP-TO-DATE
+> Task :lib:libime:extractProguardFiles UP-TO-DATE
+> Task :lib:libime:generateReleaseLintModel UP-TO-DATE
+> Task :lib:libime:prepareLintJarForPublish UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:generateReleaseLintVitalModel UP-TO-DATE
+> Task :lib:libime:checkReleaseAarMetadata UP-TO-DATE
+> Task :lib:libime:stripReleaseDebugSymbols NO-SOURCE
+> Task :lib:libime:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :lib:libime:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :lib:libime:extractReleaseAnnotations UP-TO-DATE
+> Task :lib:libime:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:libime:mergeReleaseJavaResource UP-TO-DATE
+> Task :lib:libime:syncReleaseLibJars UP-TO-DATE
+> Task :lib:libime:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :lib:fcitx5-lua:checkReleaseAarMetadata UP-TO-DATE
+> Task :lib:fcitx5-lua:stripReleaseDebugSymbols NO-SOURCE
+> Task :lib:fcitx5-lua:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :lib:fcitx5-lua:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :lib:fcitx5-lua:extractReleaseAnnotations UP-TO-DATE
+> Task :lib:fcitx5-lua:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:fcitx5-lua:mergeReleaseJavaResource UP-TO-DATE
+> Task :lib:fcitx5-lua:syncReleaseLibJars UP-TO-DATE
+> Task :lib:fcitx5-lua:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :lib:fcitx5-lua:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :lib:libime:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:lintVitalAnalyzeRelease UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:prepareLintJarForPublish UP-TO-DATE
+> Task :lib:fcitx5-lua:generateReleaseLintVitalModel UP-TO-DATE
+> Task :lib:fcitx5-lua:lintVitalAnalyzeRelease UP-TO-DATE
+> Task :lib:libime:generateReleaseLintVitalModel UP-TO-DATE
+> Task :lib:libime:lintVitalAnalyzeRelease UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:createFullJarRelease UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:generateReleaseLintModel UP-TO-DATE
+> Task :plugin:jyutping:generateReleaseLintVitalReportModel
+> Task :lib:fcitx5-chinese-addons:checkReleaseAarMetadata UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:mergeReleaseNativeLibs UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:stripReleaseDebugSymbols NO-SOURCE
+> Task :lib:fcitx5-chinese-addons:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:extractReleaseAnnotations UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:prefabReleasePackage UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:mergeReleaseJavaResource UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:syncReleaseLibJars UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :lib:fcitx5-chinese-addons:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :plugin:jyutping:lintVitalAnalyzeRelease
+> Task :plugin:jyutping:compressReleaseAssets
+
+> Task :plugin:jyutping:buildCMakeRelWithDebInfo[arm64-v8a][jyutping,libime_jyutpingdict]
+C/C++: ninja: Entering directory `/home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/.cxx/RelWithDebInfo/401r3o31/arm64-v8a'
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:174:5: warning: explicitly defaulted copy assignment operator is implicitly deleted [-Wdefaulted-function-deleted]
+C/C++:   174 |     FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY(JyutpingMatchContext);
+C/C++:       |     ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/lib/fcitx5/build/headers/usr/include/Fcitx5/Utils/fcitx-utils/macros.h:215:15: note: expanded from macro 'FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY'
+C/C++:   215 |     TypeName &operator=(const TypeName &other) = default;
+C/C++:       |               ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:176:25: note: copy assignment operator of 'JyutpingMatchContext' is implicitly deleted because field 'graph_' is of reference type 'const SegmentGraph &'
+C/C++:   176 |     const SegmentGraph &graph_;
+C/C++:       |                         ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:174:5: note: replace 'default' with 'delete'
+C/C++:   174 |     FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY(JyutpingMatchContext);
+C/C++:       |     ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/lib/fcitx5/build/headers/usr/include/Fcitx5/Utils/fcitx-utils/macros.h:215:50: note: expanded from macro 'FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY'
+C/C++:   215 |     TypeName &operator=(const TypeName &other) = default;
+C/C++:       |                                                  ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:717:19: warning: lambda capture 'this' is not used [-Wunused-lambda-capture]
+C/C++:   717 |     trie.foreach([this, &trie, &buf, &out](float value, size_t _len,
+C/C++:       |                   ^~~~~
+C/C++: 2 warnings generated.
+
+> Task :plugin:jyutping:lintVitalReportRelease
+
+> Task :plugin:jyutping:buildCMakeRelWithDebInfo[armeabi-v7a][jyutping,libime_jyutpingdict]
+C/C++: ninja: Entering directory `/home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/.cxx/RelWithDebInfo/401r3o31/armeabi-v7a'
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:174:5: warning: explicitly defaulted copy assignment operator is implicitly deleted [-Wdefaulted-function-deleted]
+C/C++:   174 |     FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY(JyutpingMatchContext);
+C/C++:       |     ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/lib/fcitx5/build/headers/usr/include/Fcitx5/Utils/fcitx-utils/macros.h:215:15: note: expanded from macro 'FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY'
+C/C++:   215 |     TypeName &operator=(const TypeName &other) = default;
+C/C++:       |               ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:176:25: note: copy assignment operator of 'JyutpingMatchContext' is implicitly deleted because field 'graph_' is of reference type 'const SegmentGraph &'
+C/C++:   176 |     const SegmentGraph &graph_;
+C/C++:       |                         ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:174:5: note: replace 'default' with 'delete'
+C/C++:   174 |     FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY(JyutpingMatchContext);
+C/C++:       |     ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/lib/fcitx5/build/headers/usr/include/Fcitx5/Utils/fcitx-utils/macros.h:215:50: note: expanded from macro 'FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY'
+C/C++:   215 |     TypeName &operator=(const TypeName &other) = default;
+C/C++:       |                                                  ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:717:19: warning: lambda capture 'this' is not used [-Wunused-lambda-capture]
+C/C++:   717 |     trie.foreach([this, &trie, &buf, &out](float value, size_t _len,
+C/C++:       |                   ^~~~~
+C/C++: 2 warnings generated.
+
+> Task :plugin:jyutping:lintVitalRelease
+> Task :plugin:jyutping:convertShrunkResourcesToBinaryRelease
+
+> Task :plugin:jyutping:buildCMakeRelWithDebInfo[x86][jyutping,libime_jyutpingdict]
+C/C++: ninja: Entering directory `/home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/.cxx/RelWithDebInfo/401r3o31/x86'
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:174:5: warning: explicitly defaulted copy assignment operator is implicitly deleted [-Wdefaulted-function-deleted]
+C/C++:   174 |     FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY(JyutpingMatchContext);
+C/C++:       |     ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/lib/fcitx5/build/headers/usr/include/Fcitx5/Utils/fcitx-utils/macros.h:215:15: note: expanded from macro 'FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY'
+C/C++:   215 |     TypeName &operator=(const TypeName &other) = default;
+C/C++:       |               ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:176:25: note: copy assignment operator of 'JyutpingMatchContext' is implicitly deleted because field 'graph_' is of reference type 'const SegmentGraph &'
+C/C++:   176 |     const SegmentGraph &graph_;
+C/C++:       |                         ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:174:5: note: replace 'default' with 'delete'
+C/C++:   174 |     FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY(JyutpingMatchContext);
+C/C++:       |     ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/lib/fcitx5/build/headers/usr/include/Fcitx5/Utils/fcitx-utils/macros.h:215:50: note: expanded from macro 'FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY'
+C/C++:   215 |     TypeName &operator=(const TypeName &other) = default;
+C/C++:       |                                                  ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:717:19: warning: lambda capture 'this' is not used [-Wunused-lambda-capture]
+C/C++:   717 |     trie.foreach([this, &trie, &buf, &out](float value, size_t _len,
+C/C++:       |                   ^~~~~
+C/C++: 2 warnings generated.
+
+> Task :plugin:jyutping:buildCMakeRelWithDebInfo[x86_64][jyutping,libime_jyutpingdict]
+C/C++: ninja: Entering directory `/home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/.cxx/RelWithDebInfo/401r3o31/x86_64'
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:174:5: warning: explicitly defaulted copy assignment operator is implicitly deleted [-Wdefaulted-function-deleted]
+C/C++:   174 |     FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY(JyutpingMatchContext);
+C/C++:       |     ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/lib/fcitx5/build/headers/usr/include/Fcitx5/Utils/fcitx-utils/macros.h:215:15: note: expanded from macro 'FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY'
+C/C++:   215 |     TypeName &operator=(const TypeName &other) = default;
+C/C++:       |               ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:176:25: note: copy assignment operator of 'JyutpingMatchContext' is implicitly deleted because field 'graph_' is of reference type 'const SegmentGraph &'
+C/C++:   176 |     const SegmentGraph &graph_;
+C/C++:       |                         ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:174:5: note: replace 'default' with 'delete'
+C/C++:   174 |     FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY(JyutpingMatchContext);
+C/C++:       |     ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/lib/fcitx5/build/headers/usr/include/Fcitx5/Utils/fcitx-utils/macros.h:215:50: note: expanded from macro 'FCITX_INLINE_DEFINE_DEFAULT_DTOR_AND_COPY'
+C/C++:   215 |     TypeName &operator=(const TypeName &other) = default;
+C/C++:       |                                                  ^
+C/C++: /home/runner/work/fcitx5-android/fcitx5-android/plugin/jyutping/src/main/cpp/libime-jyutping/src/libime/jyutping/jyutpingdictionary.cpp:717:19: warning: lambda capture 'this' is not used [-Wunused-lambda-capture]
+C/C++:   717 |     trie.foreach([this, &trie, &buf, &out](float value, size_t _len,
+C/C++:       |                   ^~~~~
+C/C++: 2 warnings generated.
+
+> Task :plugin:jyutping:mergeReleaseJniLibFolders
+> Task :plugin:jyutping:validateSigningRelease
+> Task :plugin:jyutping:writeReleaseAppMetadata
+> Task :plugin:jyutping:writeReleaseSigningConfigVersions
+> Task :plugin:rime:preBuild UP-TO-DATE
+> Task :plugin:rime:preReleaseBuild UP-TO-DATE
+> Task :plugin:rime:mergeReleaseArtProfile SKIPPED
+> Task :plugin:rime:expandReleaseL8ArtProfileWildcards SKIPPED
+> Task :plugin:rime:checkReleaseDuplicateClasses
+> Task :plugin:rime:generateReleaseBuildConfig
+> Task :plugin:rime:generateReleaseResValues
+> Task :plugin:rime:generateReleaseResources
+> Task :plugin:jyutping:mergeReleaseNativeLibs
+> Task :plugin:rime:prepareLibraryDefinitionsRelease
+> Task :plugin:rime:packageReleaseResources
+> Task :plugin:rime:processReleaseNavigationResources
+> Task :plugin:jyutping:optimizeReleaseResources
+> Task :plugin:rime:parseReleaseLocalResources
+> Task :plugin:rime:javaPreCompileRelease
+> Task :plugin:rime:checkReleaseAarMetadata
+> Task :plugin:jyutping:stripReleaseDebugSymbols
+> Task :plugin:rime:generateReleaseRFile
+> Task :plugin:rime:mapReleaseSourceSetPaths
+> Task :plugin:rime:compileReleaseKotlin NO-SOURCE
+> Task :plugin:jyutping:extractReleaseNativeSymbolTables
+> Task :plugin:rime:compileReleaseJavaWithJavac
+> Task :plugin:jyutping:packageRelease
+> Task :plugin:jyutping:generateBuildMetadataRelease
+> Task :plugin:jyutping:createReleaseApkListingFileRedirect
+> Task :plugin:rime:compileReleaseNavigationResources
+> Task :plugin:jyutping:mergeReleaseNativeDebugMetadata
+> Task :plugin:jyutping:assembleRelease
+> Task :plugin:rime:createReleaseCompatibleScreenManifests
+> Task :plugin:rime:extractDeepLinksRelease
+> Task :plugin:rime:processReleaseMainManifest
+> Task :plugin:rime:processReleaseManifest
+> Task :plugin:rime:mergeReleaseResources
+> Task :plugin:rime:extractProguardFiles
+> Task :plugin:rime:processReleaseJavaRes NO-SOURCE
+> Task :plugin:rime:mergeReleaseStartupProfile
+> Task :plugin:rime:deleteFcitxComponentExcludeFiles UP-TO-DATE
+> Task :plugin:rime:mergeReleaseJavaResource
+
+> Task :plugin:rime:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Deprecation Warning at fcitx5-rime/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:rime:configureCMakeRelWithDebInfo[armeabi-v7a]
+C/C++: CMake Deprecation Warning at fcitx5-rime/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:rime:configureCMakeRelWithDebInfo[x86]
+C/C++: CMake Deprecation Warning at fcitx5-rime/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:rime:configureCMakeRelWithDebInfo[x86_64]
+C/C++: CMake Deprecation Warning at fcitx5-rime/CMakeLists.txt:1 (cmake_minimum_required):
+C/C++:   Compatibility with CMake < 3.10 will be removed from a future version of
+C/C++:   CMake.
+C/C++:   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+C/C++:   to tell CMake that the project requires at least <min> but has been updated
+C/C++:   to work with policies introduced by <max> or earlier.
+
+> Task :plugin:rime:installProjectConfig
+> Task :plugin:rime:installProjectPrebuiltAssets FAILED
+> Task :plugin:rime:processReleaseManifestForPackage
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1789567610092.json
+
+[Incubating] Problems report is available at: file:///home/runner/work/fcitx5-android/fcitx5-android/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':plugin:rime:installProjectPrebuiltAssets'.
+> Process 'command '/usr/local/lib/android/sdk/cmake/3.31.6/bin/cmake'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 2m 46s
+567 actionable tasks: 386 executed, 181 up-to-date
