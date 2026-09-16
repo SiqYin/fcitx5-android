@@ -14,7 +14,6 @@ import_tables:
   - wuphin.word
   - wuphin.map
   - wuphin.phrases
-  - luna_pinyin.sogou
   - sougouciku
 
 ...
@@ -165,6 +164,7 @@ import_tables:
 吱	tsyu1
 豬	tsyu1
 諸	tsyu1
+瀦	tsyu1
 朱	tsyu1
 蛛	tsyu1
 珠	tsyu1
@@ -1237,6 +1237,7 @@ import_tables:
 涂	du2
 塗	du2
 途	du2
+酴	du2
 荼	du2
 屠	du2
 馱	du2
@@ -1440,6 +1441,7 @@ import_tables:
 羖	ku3
 𦍩	ku3
 盬	ku3
+嗰	ku3
 顧	ku5
 雇	ku5
 僱	ku5
@@ -1449,6 +1451,7 @@ import_tables:
 棝	ku5
 稒	ku5
 堌	ku5
+箇	ku5
 崮	ku5
 錮	ku5
 痼	ku5
@@ -1576,6 +1579,8 @@ import_tables:
 和	wu6
 賀	wu6
 荷	wu6
+楛	wu6
+弖	wu6
 烏	u1
 嗚	u1
 鎢	u1
@@ -1700,6 +1705,7 @@ import_tables:
 寓	gniu6
 蕊	gniu6
 馭	gniu6
+俁	gniu6
 麌	gniu6
 虛	shiu1
 噓	shiu1
@@ -1882,6 +1888,7 @@ import_tables:
 耍	sa3
 啥	sa5
 倽	sa5
+厙	sa5
 柴	za2
 㾹	za2
 射	za6
@@ -2238,6 +2245,7 @@ import_tables:
 侉	kho5
 瓦	ngo6
 佤	ngo6
+砙	ngo6
 疋	ngo6
 雅	ngo6
 花	ho1
@@ -2995,6 +3003,7 @@ import_tables:
 否	feu3
 缶	feu3
 浮	veu2
+桴	veu2		#上海又音
 蜉	veu2
 罘	veu2
 復	veu6
@@ -3115,6 +3124,7 @@ import_tables:
 惆	tsheu1
 瘳	tsheu1
 丑	tsheu3
+醜	tsheu3
 瞅	tsheu3
 臭	tsheu5
 湊	tsheu5
@@ -3415,6 +3425,7 @@ import_tables:
 丕	phe1
 坯	phe1
 胚	phe1
+伾	phe1
 呸	phe1
 邳	phe1
 攀	phe1
@@ -4215,6 +4226,7 @@ import_tables:
 畑	die2
 沺	die2
 鴫	die2
+畠	die2
 甜	die2
 甛	die2
 恬	die2
@@ -5227,6 +5239,7 @@ import_tables:
 絹	cioe5
 狷	cioe5
 罥	cioe5
+羂	cioe5
 鄄	cioe5
 圈	chioe1
 犬	chioe3
@@ -5856,6 +5869,7 @@ import_tables:
 𪅂	tsaon1
 裝	tsaon1
 妝	tsaon1
+牂	tsaon1
 奘	tsaon1
 𪄻	tsaon1
 葬	tsaon5
@@ -6139,6 +6153,7 @@ import_tables:
 氛	ven6
 忿	ven6
 憤	ven6
+鱝	ven6
 問	ven6
 刎	ven2
 吻	ven2
@@ -7137,6 +7152,7 @@ import_tables:
 員	yun2
 篔	yun2
 隕	yun2
+鄖	yun2
 氳	yun2
 運	yun6
 韻	yun6
@@ -7185,6 +7201,7 @@ import_tables:
 風	fon1
 楓	fon1
 瘋	fon1
+碸	fon1
 封	fon1
 鋒	fon1
 蜂	fon1
@@ -7298,8 +7315,8 @@ import_tables:
 鐘	tson1
 衷	tson1
 終	tson1
+柊	tson1
 騣	tson1
-牂	tson1
 樅	tson1
 𫩘	tson1
 𦬕	tson1
@@ -7370,6 +7387,7 @@ import_tables:
 婃	zon2
 崇	zon2
 戎	zon2
+茙	zon2
 毧	zon2
 茸	zon2
 𩞉	zon2
@@ -7410,6 +7428,9 @@ import_tables:
 空	khon1
 箜	khon1
 崆	khon1
+悾	khon1
+埪	khon1
+涳	khon1
 孔	khon3
 恐	khon3
 空	khon5
@@ -7633,6 +7654,7 @@ import_tables:
 嚓	tshaeq7
 䃰	tshaeq7
 鑔	tshaeq7
+囃	tshaeq7
 詧	tshaeq7
 欻	tshaeq7
 歘	tshaeq7
@@ -8142,6 +8164,8 @@ import_tables:
 湜	zeq8
 个	keq7
 個	keq7
+嗰	keq7
+箇	keq7
 革	keq7
 緙	keq7
 愅	keq7
@@ -8182,7 +8206,7 @@ import_tables:
 栲	kheq7
 渴	kheq7
 搿	geq8
-箇	geq8
+箇	geq8		#方位代詞「geq8」之方言正字，亦可用「搿」
 覈	ngeq8
 劾	ngeq8
 額	ngeq8
@@ -8289,6 +8313,7 @@ import_tables:
 汨	miq8
 謐	miq8
 冂	miq8
+鴓	miq8
 跌	tiq7
 的	tiq7
 菂	tiq7
@@ -9017,6 +9042,7 @@ import_tables:
 塑	soq7
 數	soq7
 速	soq7
+涑	soq7
 宿	soq7
 縮	soq7
 蓿	soq7
