@@ -37,6 +37,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
 
+      # 裁剪吴语方案的百万级搜狗词库（只保留能补上码表的有效词条），否则手机端 rime 首次部署会因体量过大崩溃
+      - name: Trim heavy rime dictionaries
+        shell: bash
+        run: python3 .ci/trim-rime-dict.py
+
       # 固定签名：本体与所有插件共用同一把钥匙，避免签名不一致导致插件装不上/识别不到
       - name: Build Release APK
         shell: bash
