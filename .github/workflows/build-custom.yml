@@ -37,12 +37,32 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
 
+      # 固定签名：本体与所有插件共用同一把钥匙，避免签名不一致导致插件装不上/识别不到
       - name: Build Release APK
         shell: bash
+        env:
+          SIGN_KEY_BASE64: ${{ secrets.SIGN_KEY_BASE64 }}
+          SIGN_KEY_PWD: ${{ secrets.SIGN_KEY_PWD }}
+          SIGN_KEY_ALIAS: ${{ secrets.SIGN_KEY_ALIAS }}
         run: |
           set -o pipefail
+          if [ -z "$SIGN_KEY_BASE64" ]; then
+            echo "::error::SIGN_KEY_BASE64 未配置，release 产物将无法签名"
+            exit 1
+          fi
           ./gradlew :app:assembleRelease 2>&1 | tee build-main.log
           ./gradlew :assembleReleasePlugins 2>&1 | tee build-plugins.log
+
+      - name: Verify APKs are signed
+        shell: bash
+        run: |
+          set -e
+          UNSIGNED=$(find app/build/outputs/apk plugin -name "*-unsigned.apk" 2>/dev/null | head -5)
+          if [ -n "$UNSIGNED" ]; then
+            echo "::error::发现未签名产物：$UNSIGNED"
+            exit 1
+          fi
+          echo "已签名 APK 数量：$(find app/build/outputs/apk/release plugin -name '*.apk' 2>/dev/null | wc -l)"
 
       - name: Upload main APK
         uses: actions/upload-artifact@v6
