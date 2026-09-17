@@ -51,7 +51,8 @@ jobs:
             exit 1
           fi
           ./gradlew :app:assembleRelease 2>&1 | tee build-main.log
-          ./gradlew :assembleReleasePlugins 2>&1 | tee build-plugins.log
+          # 正式版只构建并发布 Rime 插件，其余插件不再打包
+          ./gradlew :plugin:rime:assembleRelease 2>&1 | tee build-plugins.log
 
       - name: Verify APKs are signed
         shell: bash
