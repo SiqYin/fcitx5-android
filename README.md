@@ -4,7 +4,7 @@
 
 ## 本 fork 个修改说明（SiqYin 版）
 
-本仓库基于上游 [fcitx5-android](https://github.com/fcitx5/fcitx5-android) 修改，目标是让吴语苏沪混合腔输入方案搭配小企鹅输入法在真机上向开箱即用。相对上游个主要改动：
+本仓库基于上游 [fcitx5-android](https://github.com/fcitx5/fcitx5-android) 修改，目标是让吴语苏沪混合腔输入方案搭配小企鹅输入法在安卓平台上向开箱即用。相对上游个主要改动：
 
 - **内置吴语方案**：Rime 插件加入 `wugniu_suwu`（吴语·苏沪混合腔）方案及吴语词典、OpenCC 转换表。
 
