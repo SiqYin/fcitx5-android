@@ -4,13 +4,9 @@
 
 ## 本 fork 的修改说明（SiqYin 版）
 
-本仓库基于上游 [fcitx5-android](https://github.com/fcitx5/fcitx5-android) 修改，目标是让自建 CI 产出的「本体 + Rime（中州韵）插件」在真机上开箱即用。相对上游的主要改动：
+本仓库基于上游 [fcitx5-android](https://github.com/fcitx5/fcitx5-android) 修改，目标是让吴语苏沪混合腔输入方案搭配小企鹅输入法在真机上开箱即用。相对上游的主要改动：
 
-- **内置吴语方案**：Rime 插件加入 `wugniu_suwu`（苏州吴语·混合腔）方案及吴语词典、OpenCC 转换表。
-- **固定签名**：本体与所有插件共用同一把自建签名密钥（CI Secrets 注入），构建后自动校验签名；解决签名不一致导致的插件无法覆盖安装、无法被本体识别的问题。
-- **修复 opencc 数据路径冲突**：Rime 插件不再安装与本体 `usr/share/opencc` 同名的 `TSCharacters.ocd2`、`TSPhrases.ocd2`（该冲突触发 PathConflict，导致整个 Rime 插件数据被跳过、插件页空白）。
-- **移除百万级搜狗词库**：删除 `luna_pinyin.sogou.dict.yaml`（15.6MB / 约 105 万条）——它会使手机端 Rime 首次部署内存超出 Android Scudo 分配器单尺寸类 256MB 上限而被杀（部署约 1 分钟后闪退）；并更新吴语词典 `wugniu_suwu.dict.yaml` 至最新版。
-- **CI 精简**：Build Custom APK 工作流只构建本体与 Rime 插件，其余插件不再打包；正式发布仅包含 Rime 插件。
+- **内置吴语方案**：Rime 插件加入 `wugniu_suwu`（吴语·苏沪混合腔）方案及吴语词典、OpenCC 转换表。
 
 **安装方法**：从 Actions 的 Build Custom APK 运行产物中下载 `fcitx5-android-custom`（本体）与 `fcitx5-plugins`（Rime 插件），按设备 ABI 安装对应的 `-release.apk`（如 arm64-v8a），先装本体再装插件，然后在系统输入法管理中启用并添加「中州韵」。
 
