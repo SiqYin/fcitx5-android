@@ -1,0 +1,57 @@
+name: Publish Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Find latest green build run
+        id: run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SHA="${{ github.sha }}"
+          RUN=$(gh run list -R "${{ github.repository }}" --workflow build-custom.yml --status success --limit 20 --json databaseId,headSha \
+            | jq -r --arg sha "$SHA" '(.[] | select(.headSha == $sha) | .databaseId) // (.[0].databaseId)')
+          echo "run=$RUN" >> "$GITHUB_OUTPUT"
+          echo "Using run: $RUN"
+
+      - name: Download artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download "${{ steps.run.outputs.run }}" -R "${{ github.repository }}" -D artifacts
+
+      - name: Create release and upload APKs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="${{ github.ref_name }}"
+          cat > notes.md <<'NOTES'
+          ## fcitx5-android SiqYin 版（内置吴语方案）
+
+          基于上游 [fcitx5-android](https://github.com/fcitx5/fcitx5-android) 的自定义版本，主要改动：
+
+          - **内置吴语方案**：Rime 插件加入 `wugniu_suwu`（苏州吴语·混合腔）及吴语词典、OpenCC 转换表
+          - **固定签名**：本体与插件共用同一把发布密钥，支持覆盖安装与插件识别
+          - **修复 opencc 数据路径冲突**（PathConflict 导致插件数据被跳过）
+          - **移除百万级搜狗词库**：避免手机端 Rime 首次部署内存超限闪退
+          - **CI 精简**：正式发布仅包含 Rime 插件
+
+          ## 安装
+
+          1. 下载与本机 ABI 对应的两个 APK（一般手机选 **arm64-v8a**）：
+             - `app-<abi>-release.apk`（本体）
+             - `org.fcitx.fcitx5.android.plugin.rime-<abi>-release.apk`（Rime 插件）
+          2. 先装本体，再装插件；
+          3. 系统输入法管理中启用 fcitx5，在输入法设置里添加「中州韵」；
+          4. 首次使用点一次「部署」即可。
+          NOTES
+          gh release create "$TAG" --title "fcitx5-android SiqYin 版 $TAG" --notes-file notes.md
+          find artifacts -name "*.apk" -print0 | xargs -0 gh release upload "$TAG" --clobber
