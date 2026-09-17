@@ -53,5 +53,5 @@ jobs:
           3. 系统输入法管理中启用 fcitx5，在输入法设置里添加「中州韵」；
           4. 首次使用点一次「部署」即可。
           NOTES
-          gh release create "$TAG" --title "fcitx5-android SiqYin 版 $TAG" --notes-file notes.md
-          find artifacts -name "*.apk" -print0 | xargs -0 gh release upload "$TAG" --clobber
+          gh release create "$TAG" -R "${{ github.repository }}" --title "fcitx5-android SiqYin 版 $TAG" --notes-file notes.md
+          find artifacts -name "*.apk" -print0 | xargs -0 gh release upload "$TAG" -R "${{ github.repository }}" --clobber
