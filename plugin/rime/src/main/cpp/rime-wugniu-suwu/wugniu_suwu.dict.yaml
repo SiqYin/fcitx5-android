@@ -6060,8 +6060,9 @@ import_tables:
 遑	waon2
 鍠	waon2
 喤	waon2
-旺	waon6
+韹	waon2
 晃	waon2
+旺	waon6
 汪	uaon1
 尪	uaon1
 尢	uaon1
@@ -7128,6 +7129,7 @@ import_tables:
 羣	jiun2
 郡	jiun6
 珺	jiun6
+莙	jiun6
 熏	shiun1
 燻	shiun1
 醺	shiun1
@@ -7711,6 +7713,7 @@ import_tables:
 齾	ngaeq8
 瞎	haeq7
 呷	haeq7
+轄	haeq7		#上海又音白讀
 狹	ghaeq8
 盒	ghaeq8
 匣	ghaeq8
@@ -7729,8 +7732,10 @@ import_tables:
 恰	chiaeq7
 掐	chiaeq7
 㖏	gniaeq8
+轄	shiaeq7		#上海又音文讀
 峽	yaeq8
 狹	yaeq8
+轄	yaeq8		#蘇州舊文讀
 鴨	iaeq7
 刮	kuaeq7
 颳	kuaeq7
@@ -8588,6 +8593,7 @@ import_tables:
 岌	jiq8
 屐	jiq8
 劇	jiq8
+鮚	jiq8
 聶	gniq8
 鑷	gniq8
 躡	gniq8
