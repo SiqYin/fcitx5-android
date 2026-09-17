@@ -2,13 +2,13 @@
 
 [Fcitx5](https://github.com/fcitx/fcitx5) input method framework and engines ported to Android.
 
-## 本 fork 的修改说明（SiqYin 版）
+## 本 fork 个修改说明（SiqYin 版）
 
-本仓库基于上游 [fcitx5-android](https://github.com/fcitx5/fcitx5-android) 修改，目标是让吴语苏沪混合腔输入方案搭配小企鹅输入法在真机上开箱即用。相对上游的主要改动：
+本仓库基于上游 [fcitx5-android](https://github.com/fcitx5/fcitx5-android) 修改，目标是让吴语苏沪混合腔输入方案搭配小企鹅输入法在真机上向开箱即用。相对上游个主要改动：
 
 - **内置吴语方案**：Rime 插件加入 `wugniu_suwu`（吴语·苏沪混合腔）方案及吴语词典、OpenCC 转换表。
 
-**安装方法**：从 Actions 的 Build Custom APK 运行产物中下载 `fcitx5-android-custom`（本体）与 `fcitx5-plugins`（Rime 插件），按设备 ABI 安装对应的 `-release.apk`（如 arm64-v8a），先装本体再装插件，然后在系统输入法管理中启用并添加「中州韵」。
+**安装方法**：从 Actions 个 Build Custom APK 运行产物中宕落 `fcitx5-android-custom`（本体）搭 `fcitx5-plugins`（Rime 插件），按设备 ABI 安装对应个 `-release.apk`（如 arm64-v8a），先装本体再装插件，然后在系统输入法管理中启用并添加「中州韵」。
 
 ## Download
 
