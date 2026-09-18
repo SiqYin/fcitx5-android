@@ -4434,14 +4434,15 @@ import_tables:
 汧	chie1
 攑	chie1
 䭤	chie3
+繾	chie3
 蹇	chie3
+蜸	chie3
 縴	chie5
 欠	chie5
 芡	chie5
 歉	chie5
 遣	chie5
 譴	chie5
-繾	chie3
 艦	chie5
 塹	chie5
 嵌	chie5
@@ -4504,6 +4505,7 @@ import_tables:
 玁	shie3
 獫	shie3
 幰	shie3
+䘆	shie3
 憲	shie5
 顯	shie5
 韅	shie5
@@ -4587,6 +4589,7 @@ import_tables:
 郾	ie1
 弇	ie1
 媕	ie1
+懨	ie1
 演	ie3
 奄	ie3
 掩	ie3
@@ -6526,6 +6529,7 @@ import_tables:
 詪	gen6
 亨	hen1
 哼	hen1
+掀	hen1		#詞「hen1（撕）」之本字
 擤	hen3
 狠	hen3
 很	hen3
