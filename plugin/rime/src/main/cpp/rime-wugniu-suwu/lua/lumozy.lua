@@ -305,7 +305,7 @@ function M.case_processor(key, env)
   end
 
   local kc = key.keycode
-  log.info('lumozy enter v1.10 kc=' .. kc .. ' inp=[' .. inp ..
+  log.info('lumozy enter v1.12.3 kc=' .. kc .. ' inp=[' .. inp ..
     '] cap=' .. tostring(cap_next))
 
   -- 句末檢測：. ! ?、回車 → 下一詞首字母大寫
@@ -456,7 +456,43 @@ function M.romazy_filter(input, env)
       local ok, g = pcall(function() return cand:get_genuine() end)
       if ok and g then code = g.comment or '' end
     end
-    if skip_all or not is_code(code) then
+    -- 特事特辦（弗改字音表）：
+    --   ① 字音表裏「丼」个 don 嘸聲調 → 按 don2 处理，照常出拼音文
+    --      （單字 `don` 搭組詞/句子候選裏个音節 `gnieu2'don` 儕算；
+    --       %f frontier 保證弗會碰着 don2 本生）
+    --   ② 符號條目「%」个 pheqsen → 「%」本體搭拼音文兩條候選並列
+    if not skip_all then
+      code = code:gsub('%f[%a]don%f[^%a%d]', 'don2')
+    end
+    if not skip_all and (cand.text or '') == '%' and code == 'pheqsen' then
+      local typed_full = orig:sub(cand.start + 1, cand._end)
+      local prefix_blank = inp:sub(1, cand.start):match('^%s*$') ~= nil
+      local auto_cap = cap_next and prefix_blank and typed_full ~= ''
+        and typed_full == typed_full:lower()
+      local pe = typed_full ~= '' and typed_full or cand.preedit
+      local k1 = '%\1pheqsen'
+      if not seen[k1] then
+        seen[k1] = true
+        local c1 = Candidate(cand.type, cand.start, cand._end, '%',
+                             show_comment and 'pheqsen' or '')
+        c1.preedit = pe
+        yield(c1)
+      end
+      local r0 = 'pheqsen'
+      local k2 = show_comment and (r0 .. '\1%') or r0
+      if not seen[k2] then
+        seen[k2] = true
+        local r = apply_case(r0, typed_full)
+        if auto_cap then
+          r = r:gsub('[a-z]', string.upper, 1)
+        end
+        local seg_sep = (cand._end < #inp) and ' ' or ''
+        local c2 = Candidate(cand.type, cand.start, cand._end, r .. seg_sep,
+                             show_comment and '%' or '')
+        c2.preedit = pe
+        yield(c2)
+      end
+    elseif skip_all or not is_code(code) then
       local key = (cand.text or '') .. '\1' .. code
       if not seen[key] then
         seen[key] = true
