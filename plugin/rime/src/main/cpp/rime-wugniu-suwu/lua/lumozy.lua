@@ -324,6 +324,18 @@ function M.case_processor(key, env)
   --   字母 → 落下去正常進組編，指示空格隨詞一道上屏
   local spaces_only = inp ~= '' and inp:match('^%s*$') ~= nil
   if spaces_only then
+    if kc == 0xFF08 then
+      -- 退格刪指示空格：同步遞減字符計數（弗然「刪光可見詞」
+      -- 之後計數還賸一截，重輸弗會恢復句首大寫）
+      chars_since_start = chars_since_start - 1
+      if chars_since_start < 0 then
+        chars_since_start = 0
+      end
+      if chars_since_start == 0 then
+        cap_next = true
+      end
+      return 2  -- 編輯器自然刪脫一隻空格
+    end
     if PUNCT_KEYS[kc] then
       -- 清脫指示（含誤打多个空格），標點緊貼詞後；
       -- 再挂一隻——標點之後个下一詞照樣有前導空格
