@@ -19,7 +19,7 @@ __include: wugniu_suwu.schema:/
 schema:
   schema_id: wugniu_lumozy
   name: 吳語（拼音文）
-  version: "1.11.2"
+  version: "1.12.0"
   author:
     - 拼音文方案：基於雪螢 SiqYin《吳語（混合腔）》輸入方案
     - 羅馬字正字法：吳語蘇滬混合腔拼音文方案
@@ -51,6 +51,11 @@ switches:
   - name: ascii_mode
     reset: 0
     states: [拼音文, 西文]
+  # 候選註釋：有註釋＝拼音文後面跟漢字（預設）；
+  # 無註釋＝祇顯示拼音文，且拼音文相同个候選合併成一條
+  - name: lumozy_comment
+    reset: 0
+    states: [有註釋, 無註釋]
 
 engine:
   processors:

@@ -427,6 +427,15 @@ function M.romazy_filter(input, env)
   local skip_all = inp:match('^q[a-z\']*$') ~= nil
     or inp:match('^x[hspnz]*$') ~= nil
   local orig = orig_valid(inp) and orig_input or inp
+  -- 註釋開關：有註釋＝拼音文＋漢字；無註釋＝淨拼音文，
+  -- 拼音文相同个候選合併成一條
+  local show_comment = true
+  pcall(function()
+    -- rime 開關是布爾：false＝第一狀態（有註釋），true＝第二（無）
+    if ctx:get_option('lumozy_comment') then
+      show_comment = false
+    end
+  end)
 
   local seen = {}
   for cand in input:iter() do
@@ -543,7 +552,9 @@ function M.romazy_filter(input, env)
       -- 就出三隻空格，即四個詞。
       local seg_sep = (cand._end < #inp) and ' ' or ''
       for ri, r in ipairs(roms) do
-        local key = r .. '\1' .. hanzi
+        -- 有註釋：同樣拼音文弗同漢字各自成條；
+        -- 無註釋：拼音文相同就合併（key 淨用拼音文）
+        local key = show_comment and (r .. '\1' .. hanzi) or r
         if not seen[key] then
           seen[key] = true
           r = apply_case(r, typed_full)
@@ -551,7 +562,8 @@ function M.romazy_filter(input, env)
             r = r:gsub('[a-z]', string.upper, 1)
           end
           local nc = Candidate(cand.type, cand.start, cand._end,
-                               r .. seg_sep, hanzi)
+                               r .. seg_sep,
+                               show_comment and hanzi or '')
           if typed_full and typed_full ~= '' then
             nc.preedit = typed_full
           else
