@@ -139,9 +139,20 @@ translator:
   dictionary: wugniu_suwu # 調取詞典wugniu_suwu
   prism: wugniu_suwu      # 根據拼寫運算生成棱鏡文件wugniu_suwu
   spelling_hints: 1          # 標註拼音
+  # 語法模型可參考已上屏个上文，長句選詞更準
+  contextual_suggestions: true
   comment_format:
     # 單字調弗顯示
     - xform/\d//
+
+# 語法模型（octagram / 八股文）
+# 由吳語正字法語料搭 wuphin 詞庫練成个字符 2–6 gram 模型
+# 已適配多套輸出字形：詞庫原形（漢字）/ 吳語漢字 / 簡體（汉字）
+# 模型檔 wugniu_suwu.gram 必須與下面 language 逐字相同，並且同放用戶文件夾
+grammar:
+  language: wugniu_suwu
+  collocation_min_length: 2  # 弗可省，否則 2-gram 命中會畀 weak 懲罰壓脫
+  collocation_max_length: 6  # 對應模型實際構建个 2–6 階
 
 # 副翻譯器1 明月拼音
 luna_pinyin:

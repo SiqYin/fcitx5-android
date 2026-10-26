@@ -1,3 +1,11 @@
+10.25.2026 更新：
+
+吴语拼音文输入法已入库！欢迎试用！
+
+————————————
+
+该方案个安卓直装版输入法：https://github.com/SiqYin/fcitx5-android 。
+
 苏沪混合腔是吴语以中派苏州话与老派上海话箇两种接近个吴语方言为基础，兼考北部吴语诸方言音韵特征个混合腔口。苏沪混合腔个音系与字音经过仔审音与语音规范哉。苏沪混合腔属于吴语自然方言个规范化变体。
 
 'Souwu wengheqchiaon zy Wugniu i 'tsonpha 'Soutseughegho yu laupha Zaonheghegho geqliantson tsiqjin keq Wugniu 'faonye we 'citshou, 'ciekhau poqbu Wugniu 'tsyufaonye 'inyun deqtsen keq wengheq 'chiaonkheu. 'Souwu wengheqchiaon keq 'inyi yu zyin 'cinkoutsy senin yu gniuinkueve tse. 'Souwu wengheqchiaon zoqyu Wugniu zyzoefaonye keq 'kueveho piethi.
@@ -211,7 +219,7 @@ Diaule min souzy piau ziezydiau, betsyu 'zie' piau seqyon ziezy vewe, 'gheu' pia
 
 8XC 23-44 geqba 弗标
 
-当声母m n l搭配阴声调辰，记作'm 'n 'l。如：美好（me3hau3-5x）为'mehau；拉la1为''la。er6为er，er1为'er。
+当声母m n l gn搭配除1声（阴平）外个阴声调辰，记作m' n' l' gn'，如：美好（me3hau3-5x）为m'ehau；当声母m n l gn搭配1声（阴平）辰，记作'm 'n 'l 'gn，如：蛮好（me1hau3-1x）为'mehau，拉la1为'la。er6为er，er1为'er。
 
 本文拼音文统一采用声调简化标记法。
 

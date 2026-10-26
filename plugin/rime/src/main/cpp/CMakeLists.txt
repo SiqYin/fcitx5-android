@@ -62,6 +62,8 @@ install(FILES
 install(FILES
         "rime-wugniu-suwu/wugniu_suwu.schema.yaml"
         "rime-wugniu-suwu/wugniu_suwu.dict.yaml"
+        "rime-wugniu-suwu/wugniu_lumozy.schema.yaml"
+        "rime-wugniu-suwu/wugniu_suwu.gram"
         "rime-wugniu-suwu/wuphin.word.dict.yaml"
         "rime-wugniu-suwu/wuphin.map.dict.yaml"
         "rime-wugniu-suwu/wuphin.phrases.dict.yaml"
@@ -90,5 +92,15 @@ install(FILES
         "rime-wugniu-suwu/opencc/TSCharacters.ocd"
         "rime-wugniu-suwu/opencc/TSPhrases.ocd"
         DESTINATION "${FCITX_INSTALL_DATADIR}/opencc"
+        COMPONENT prebuilt-assets
+        )
+
+# wugniu_lumozy (吳語拼音文) 个 Lua 脚本
+# librime-lua 拿 <shared_data_dir>/lua/?.lua 搭 <shared_data_dir>/lua/?/init.lua
+# 侪摆进 package.path，所以脚本装到 rime-data/lua 下向就好寻着，
+# schema 里个 lua_processor@*lumozy*… / lua_filter@*lumozy*… 正好引用。
+install(FILES
+        "rime-wugniu-suwu/lua/lumozy.lua"
+        DESTINATION "${FCITX_INSTALL_DATADIR}/rime-data/lua"
         COMPONENT prebuilt-assets
         )

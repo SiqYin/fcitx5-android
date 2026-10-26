@@ -1,0 +1,155 @@
+# Rime schema
+# encoding: utf-8
+#
+# 吳語拼音文輸入法（蘇滬混合腔羅馬字）
+# 學昭明語 ciomien-romazy 个做法：整個方案 __include 漢字方案，
+# 復用 wugniu_suwu 漢字詞典，弗另外生成詞典；
+# 由 lua/lumozy.lua 擔候選个漢字搭音節碼互換，即時計拼音文正字法。
+#
+# 部署祇需要兩個文件：
+#   wugniu_lumozy.schema.yaml（本文件）
+#   lua/lumozy.lua
+# 弗需要改 rime.lua（方案用 @*lumozy*… 直接 require 模塊）。
+# 前提：用戶文件夾裏向已有《吳語（混合腔）》原版文件
+#   （wugniu_suwu.schema.yaml、wugniu_suwu.dict.yaml、wuphin.*.dict.yaml、
+#    luna_pinyin.sogou.dict.yaml、sougouciku.dict.yaml、symbols_wu.yaml、opencc/）。
+
+__include: wugniu_suwu.schema:/
+
+schema:
+  schema_id: wugniu_lumozy
+  name: 吳語（拼音文）
+  version: "1.11.1"
+  author:
+    - 拼音文方案：基於雪螢 SiqYin《吳語（混合腔）》輸入方案
+    - 羅馬字正字法：吳語蘇滬混合腔拼音文方案
+  description: |
+    打吳語拼音文，出吳語拼音文（蘇滬混合腔正字法）。
+
+    * 以詞為單位連寫音節，詞搭詞之間用空格上屏：白相 beqsian、去白相 chi beqsian
+    * 詞首字調 1，詞前加小撇（U+0027）：雞排 ci1ba2 → 'ciba
+    * 詞首字聲母 m/n/l/gn 配調 3/5/7，聲母後加小撇：美好 me3hau3 → m'ehau
+    * 詞首字聲母 m/n/l/gn 配調 1，詞前加小撇：蠻好 me1hau3 → 'mehau
+    * 成音節鼻音配陰調，音節前加小撇：嗯 n3 → 'n
+    * 其餘調類弗標：作興 tsoq7shin1 → tsoqshin
+    * 一詞多音全部列出：人民 → zenmin、gninmin
+    * u 韻變體音節同樣好敲，輸出保留變體：地圖 → didu、didou
+    * 大寫字母正常識別，輸出保留對應大寫：BeqSian → BeqSian
+    * 智能空格：詞上屏後自動帶空格；後頭打逗號、句號等標點，
+      空格自動縮回（含誤打个空格也糾正）；退格撤銷待發空格
+    * 輸入弗需要聲調搭小撇，淨敲小寫字母就好
+
+    標點一律原始半角英文套（, . ; : ! ? 直通）。
+    普通閒話反查撳 Q，筆畫反查撳 X（候選弗轉換，直接顯漢字搭吳拼註釋）。
+
+# 智能空格＋大寫轉小寫：排拉 recognizer 之前
+# （免得 q/x 反查鍵搶拉智能空格處理前頭）、speller 之前
+# （大寫鍵必須先畀轉成小寫再進組編區）。
+# 照昭明語 ciomien-romazy：切換項全刪——字形、全半角、句讀符號
+# 一概弗要。註釋漢字由 lua 強制吳語漢字檔；標點走原始半角直通。
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [拼音文, 西文]
+
+engine:
+  processors:
+    - ascii_composer
+    - lua_processor@*lumozy*case_processor
+    - recognizer
+    - key_binder
+    - speller
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - affix_segmentor@luna_pinyin
+    - affix_segmentor@stroke
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - script_translator
+    - reverse_lookup_translator
+    - script_translator@luna_pinyin
+    - table_translator@stroke
+    - table_translator@custom_phrase
+  filters:
+    # 註釋漢字恆用吳語漢字標準（開關由 lua 強制開，弗進菜單）
+    - simplifier@varients_wy
+    # 漢字⇄拼音文互換。代替 uniquifier（佢會拿同拼音文弗同漢字个
+    # 候選併脫一行；去重由 lumozy.lua 照「拼音文＋漢字」自己做）
+    - lua_filter@*lumozy*romazy_filter
+    - reverse_lookup_filter@wy_reverse_lookup
+
+speller:
+  # 詞搭詞之間用空格上屏：delimiter 弗含空格，空格鍵落到
+  # express_editor 變 Confirm（頂頭候選上屏），正好逐詞輸出。
+  # 撇號仍可手動分隔音節（如 beq'sian）。
+  delimiter: "'"
+  algebra:
+    # 搭漢字方案完全一致，唯拿「xform/\d// 聲調去脱」改成
+    # 「derive/[1-8]//」：原帶調碼搭無調碼並存，用戶敲無調字母
+    # 就好，而候選註釋（spelling_hints）保留原始帶調碼，
+    # 供 lua 按聲調即時計算小撇。
+    - xform/^([bcdfghjklpqstvwxyz])$/$1_/
+    - derive/[1-8]//
+
+    # 尖團弗分（容差：fuzz 降權，精确匹配優先）
+    - fuzz/ts(h?)i/c$1i/
+    - fuzz/^(s|z)i/$1hi/
+    # 干官弗分
+    - fuzz/uoe/oe/
+    - fuzz/woe/ghoe/
+    # 打黨弗分
+    - fuzz/aon/an/
+    - fuzz/an/aon/
+    # 走酒弗分
+    - fuzz/ieu/eu/
+    # 李旅弗分（chi/chiu 一類：容差降權，免得 區 藉容差搶脫 去 个句子）
+    - fuzz/(?<=[szhl])iu/i/
+    # 麻摩弗分
+    - fuzz/mu/mo/
+    # 郭國弗分
+    - fuzz/ueq/oq/
+    - fuzz/weq/ghoq/
+    # u韻變體（du→dou、su→sou……正身變體，弗降權；輸出保留變體由 lua 處理）
+    - derive/u/ou/
+    # wu音變體（wu→ghou，正身變體）
+    - derive/wu/ghou/
+    # 襪麥弗分
+    - fuzz/ae(?=q|h)/a/
+    # 司書弗分
+    - fuzz/(?<=[szh])yu/y/
+
+    # 簡拼
+    - abbrev/^([a-z]).+$/$1/
+    - abbrev/^([pmtnlszckg]h|gn|ng|tsh?|dz).+$/$1/
+    # uen韻簡拼
+    - derive/uen/un/
+    # c組聲母後自動加i
+    - derive/^(c|j|gn|[csz]h)i(?=[aoue])/$1/
+    # 容差 介音、主元音順序相調
+    - derive/^(.+)([iu])([aeou])([euonqh])$/$1$3$2$4/
+
+recognizer:
+  import_preset: default
+  patterns:
+    luna_pinyin: "^q[a-z']*$"
+    stroke: "^x[hspnz]*$"
+    # 預設 default.yaml 有 uppercase: "[A-Z][-'+_0-9A-Za-z]*$"
+    # 會擔大寫鍵直接推進組編區，搶拉 lumozy 大寫處理器前頭。
+    # 覆蓋成永弗匹配，大寫統統走拼音文。
+    uppercase: "^$"
+
+translator:
+  dictionary: wugniu_suwu   # 復用漢字方案詞典（弗另建）
+  prism: wugniu_lumozy      # 拼寫運算弗同，稜鏡各自生成
+  # 逐個候選个註釋保留完整原始碼（空格分音節、帶聲調），
+  # lua 靠佢計正字法；上限 32 音節搭詞典編碼器一致。
+  spelling_hints: 32
+  always_show_comments: true
+  # 弗好讓底層拿聲調數字剗脱——lua 要用聲調算小撇
+  comment_format: []
