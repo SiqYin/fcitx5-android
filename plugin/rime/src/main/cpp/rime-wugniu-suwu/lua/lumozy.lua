@@ -107,23 +107,38 @@ local function match_variant(bare, t)
 end
 
 -- comment 形如 "beq7'sian1"（delimiter[0]＝撇號作音節分隔）。
--- 注意 Lua pattern 弗支持分組量詞，逐段手寫校驗。
-local function is_code(comment)
-  if comment == '' or comment:find("[^%a%d' ]") then return false end
-  local n = 0
-  for s in comment:gmatch('[%a%d]+') do
-    n = n + 1
-    if not s:match('^[a-z]+[1-8]$') then return false end
+-- 例外：字音表裏有幾條多字條目个碼弗按規範寫（音節之間嘸空格，
+-- 例如 如何 naeq8han1、如何然 na6nen2），librime 會當佢一隻
+-- 偽音節。此地按「字母＋末位聲調數字」重新切分，自動歸正成
+-- 多音節——迭兩條就照詞个樣處理（naeqhan / nanen），弗必改詞典。
+local function split_code(comment)
+  local syls, cur = {}, ''
+  for ch in comment:gmatch('.') do
+    if ch == ' ' or ch == "'" then
+      if cur ~= '' then
+        syls[#syls + 1] = cur
+        cur = ''
+      end
+    else
+      cur = cur .. ch
+      if ch:match('%d') then          -- 聲調數字＝音節結束
+        syls[#syls + 1] = cur
+        cur = ''
+      end
+    end
   end
-  return n > 0
+  if cur ~= '' then syls[#syls + 1] = cur end
+  return syls
 end
 
-local function split_code(comment)
-  local syls = {}
-  for s in comment:gmatch('[%a%d]+') do
-    syls[#syls + 1] = s
+local function is_code(comment)
+  if comment == '' or comment:find("[^%a%d' ]") then return false end
+  local syls = split_code(comment)
+  if #syls == 0 then return false end
+  for _, s in ipairs(syls) do
+    if not s:match('^[a-z]+[1-8]$') then return false end
   end
-  return syls
+  return true
 end
 
 -- ============ 詞首字同字母異調補撇 ============
