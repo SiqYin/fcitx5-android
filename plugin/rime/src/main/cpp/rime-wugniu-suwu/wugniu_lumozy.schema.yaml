@@ -19,7 +19,7 @@ __include: wugniu_suwu.schema:/
 schema:
   schema_id: wugniu_lumozy
   name: 吳語（拼音文）
-  version: "1.12.3"
+  version: "1.12.9"
   author:
     - 拼音文方案：基於雪螢 SiqYin《吳語（混合腔）》輸入方案
     - 羅馬字正字法：吳語蘇滬混合腔拼音文方案
@@ -148,6 +148,18 @@ recognizer:
     # 會擔大寫鍵直接推進組編區，搶拉 lumozy 大寫處理器前頭。
     # 覆蓋成永弗匹配，大寫統統走拼音文。
     uppercase: "^$"
+
+# 關脫「單擊 Shift 切西文」（預設 inline_ascii：快點 Shift 會切進
+# 西文模式，之後个大寫字母畀 ascii_composer 原樣塞進組編區，繞過
+# lumozy 大寫處理器——大寫就「無法識別」哉；安卓粘滯 Shift 也中
+# 迭招）。西文請用菜單裏向个「拼音文／西文」切換。
+ascii_composer:
+  switch_key:
+    Caps_Lock: commit_code
+    Control_L: noop
+    Control_R: noop
+    Shift_L: noop
+    Shift_R: noop
 
 translator:
   dictionary: wugniu_suwu   # 復用漢字方案詞典（弗另建）

@@ -223,6 +223,9 @@ local cap_next = true
 local last_hist_text = nil
 local ext_pending = false
 local cap_lock = false
+-- 粘滯 Shift：Shift 按下事件（安卓 Trime 个 Shift 係單獨一記鍵，
+-- 字母本生弗帶掩碼）掛个記號，下一隻字母鍵按大寫處理
+local shift_armed = false
 -- 自最近句首點以來，本方案發出到正文个字符數：
 -- 退格刪到 0，就等於回到句首，重新打開自動大寫
 local chars_since_start = 0
@@ -238,6 +241,46 @@ local PUNCT_KEYS = {
   [47] = true,  -- /
   [39] = true,  -- '
 }
+
+-- 修飾層標點：安卓 Trime 个 ?! 等係 「Shift+符號」送个
+-- （? = Shift+/，! = Shift+1），keycode 係下層字符。
+local SHIFT_PUNCT = {
+  [49] = '!', [50] = '@', [51] = '#', [52] = '$', [53] = '%',
+  [54] = '^', [55] = '&', [56] = '*', [57] = '(', [48] = ')',
+  [45] = '_', [61] = '+', [91] = '{', [93] = '}', [92] = '|',
+  [59] = ':', [39] = '"', [44] = '<', [46] = '>', [47] = '?',
+  [96] = '~',
+}
+
+-- 按鍵解析出來个標點字符；弗係標點就 nil
+local function punct_char(key, kc)
+  if key:shift() and SHIFT_PUNCT[kc] then
+    return SHIFT_PUNCT[kc]
+  end
+  if PUNCT_KEYS[kc] then
+    return string.char(kc)
+  end
+  return nil
+end
+
+-- 標點引擎親手上屏：清脫組編區（弗留殘餘指示空格），再 push
+-- 標點本體並 commit——同選候選同一條路。弗好交畀前端 kRejected：
+-- 安卓 Trime 對弗喫个鍵處理各樣，句讀會插到組編區前頭（光標
+-- 跑到標點左邊），Shift 層个 ?! 干脆弗插、賸落个指示空格倒上屏。
+local function commit_punct(ctx, ch)
+  pcall(function()
+    ctx:clear()
+    ctx:push_input(ch)
+    ctx:commit()
+  end)
+  log.info('lumozy punct [' .. ch .. ']')
+  chars_since_start = chars_since_start + 1
+  last_hist_text = ch
+  ext_pending = true            -- 下個詞照樣前導空格
+  if not cap_lock then
+    cap_next = false
+  end
+end
 
 -- 選詞之後个共同收尾：記字符數、關句首大寫（句末鍵当次除外）、
 -- 推入「待輸入空格」指示（佢就是下個詞个分隔空格）。
@@ -270,6 +313,22 @@ function M.case_processor(key, env)
   if key:release() or key:ctrl() or key:alt() or key:super() or key:caps() then
     return 2  -- kNoop
   end
+  -- 修飾鍵本生（Shift/Ctrl/Alt/Meta/Super 按下）：完全弗理。
+  -- 弗然會落到底下个 ext_pending = false——按住 Shift 輸大寫辰光，
+  -- Shift 按下事件恰好拿「點選提交後待補个前導空格」清脫，
+  -- 兩輪選詞之間个空格就嘸脫哉。
+  local mkc = key.keycode
+  if mkc >= 0xFFE1 and mkc <= 0xFFEE then
+    -- Shift 按下：記「粘滯 Shift」（釋放弗清，先按後放再敲字母
+    -- 也算）；其餘修飾鍵弗理
+    if not key:release() and (mkc == 0xFFE1 or mkc == 0xFFE2) then
+      shift_armed = true
+    end
+    return 2
+  end
+  -- 本記鍵喫脫粘滯記號（ 衹作用一記字母；標點、空格、退格儕算清）
+  local sticky = shift_armed
+  shift_armed = false
   local ctx = env.engine.context
   local inp = ctx.input
 
@@ -305,19 +364,29 @@ function M.case_processor(key, env)
   end
 
   local kc = key.keycode
-  log.info('lumozy enter v1.12.3 kc=' .. kc .. ' inp=[' .. inp ..
+  log.info('lumozy enter v1.12.9 kc=' .. kc .. ' inp=[' .. inp ..
     '] cap=' .. tostring(cap_next))
 
   -- 句末檢測：. ! ?、回車 → 下一詞首字母大寫
   -- （本鍵当次个上屏弗清 cap_next，故設 cap_lock）
   cap_lock = false
-  if kc == 46 or kc == 33 or kc == 63 or kc == 13 or kc == 0xFF0D then
+  local pch = punct_char(key, kc)
+  if pch == '.' or pch == '!' or pch == '?' or kc == 13 or kc == 0xFF0D then
     cap_next = true
     cap_lock = true
     chars_since_start = 0
   end
+  -- 組編中个「'」＝同文（tongwenfeng）主題組編中个 Shift 鍵
+  -- （`composing: delimiter`，發个係分詞符弗係 Shift）——就地
+  -- 征用：弗上屏，改掛「下一隻字母大寫」粘滯記號。本方案輸入
+  -- 從弗需要小撇（正字法个撇由過濾器自動加），西文模式除外
+  --（彼搭 ' 係真撇號）。組編區空个 ' 照舊按標點上屏。
+  if kc == 39 and inp ~= '' and not ctx:get_option('ascii_mode') then
+    shift_armed = true
+    return 1
+  end
   -- 組編區裏衹有「待輸入空格」指示个場化：
-  --   標點 → 清脫指示（含誤打个），標點緊貼詞後
+  --   標點 → 清脫指示（含誤打个），標點緊貼詞後再上屏
   --   回車 → 清脫，原始換行
   --   空格 → 再挂一隻（多格距離）
   --   退格 → 編輯器自然刪脫一隻指示空格
@@ -336,15 +405,9 @@ function M.case_processor(key, env)
       end
       return 2  -- 編輯器自然刪脫一隻空格
     end
-    if PUNCT_KEYS[kc] then
-      -- 清脫指示（含誤打多个空格），標點緊貼詞後；
-      -- 再挂一隻——標點之後个下一詞照樣有前導空格
-      pcall(function()
-        ctx:clear()
-        ctx:push_input(' ')
-      end)
-      log.info('lumozy cling: indicator re-armed after punct')
-      return 0  -- kRejected，標點直通
+    if pch then
+      commit_punct(ctx, pch)  -- 清脫指示空格，標點緊貼詞後上屏
+      return 1
     elseif kc == 13 or kc == 0xFF0D then
       pcall(function() ctx:clear() end)
       return 2
@@ -355,23 +418,31 @@ function M.case_processor(key, env)
     -- 別个鍵（字母、退格、數字等）落下去正常處理
   end
 
-  -- 組編區空个標點（例如詞上屏、指示空格撥退格彈脫之後）：
-  -- 標點直通，並挂一隻指示空格，保證標點後个下一詞有空格
-  if PUNCT_KEYS[kc] and inp == '' then
-    if not spaces_only then
-      pcall(function() ctx:push_input(' ') end)
+  -- 標點：引擎親手上屏（弗交畀前端 kRejected——安卓 Trime 對
+  -- 弗喫个鍵處理各樣：句讀插到組編區前頭、Shift 層 ?! 弗插）。
+  -- 組編中有詞就先擔詞上屏，再上標點；還有剩餘輸入就弗喫鍵，
+  -- 照舊交畀前端（分段選詞个罕見場化）。
+  if pch then
+    if inp ~= '' then
+      local ok = ctx:confirm_current_selection()
+      log.info('lumozy punct confirm=' .. tostring(ok))
+      -- 記賬（弗挂指示空格：標點馬上跟牢上屏）
+      pcall(function()
+        local e = ctx.commit_history:back()
+        if e and e.text and e.text ~= last_hist_text then
+          chars_since_start = chars_since_start + #e.text
+          last_hist_text = e.text
+        end
+      end)
+      if not cap_lock then
+        cap_next = false
+      end
     end
-    return 0  -- kRejected
-  end
-
-  -- 詞中標點：親手擔詞上屏（標點本身弗進組編，原樣落盤：
-  -- kRejected＝弗喫鍵）。必須攔拉 key_binder 前頭——default
-  -- 預設把組編中个 , . 綁成翻頁，弗攔就變翻頁哉。
-  if PUNCT_KEYS[kc] and inp ~= '' then
-    local ok = ctx:confirm_current_selection()
-    log.info('lumozy punct confirm=' .. tostring(ok))
-    after_commit(ctx)
-    return 0  -- kRejected
+    if ctx.input == '' then
+      commit_punct(ctx, pch)
+      return 1
+    end
+    return 0  -- kRejected（剩餘輸入弗動）
   end
 
   -- 數字鍵選詞：弗攔，交畀 rime 个 selector——佢按「當前頁第幾個」
@@ -409,16 +480,24 @@ function M.case_processor(key, env)
   local is_word_key = (kc >= 65 and kc <= 90)
     or (kc >= 97 and kc <= 122)
   if is_word_key then
-    -- 點選提交之後个頭一隻字母：補推指示空格（分隔隨詞上屏）
+    -- 點選提交之後个頭一隻字母：補推指示空格（分隔隨詞上屏）。
+    -- 補完要刷新 inp——底下 caret 檢查用个還是按鍵開頭个舊值，
+    -- 弗刷新就會誤判「光標弗拉末尾」擔大寫鍵放行到鏈尾，畀
+    -- express_editor 个 DirectCommit 擔剛補个空格當正文提交脫。
     if ext_pending and inp == '' then
       pcall(function() ctx:push_input(' ') end)
       ext_pending = false
       orig_input = ' '
+      inp = ctx.input
     end
-    if kc >= 65 and kc <= 90 then            -- A–Z
+    -- 大寫：A–Z 鍵碼；或者 Shift＋小寫鍵碼——安卓 Trime 粘滯
+    -- Shift 送个是大寫意圖＋小寫鍵碼＋Shift 掩碼
+    if kc >= 65 and kc <= 90
+        or ((key:shift() or sticky) and kc >= 97 and kc <= 122) then
       if ctx.caret_pos ~= #inp then return 2 end
-      orig_input = (orig_valid(inp) and orig_input or inp) .. string.char(kc)
-      ctx:push_input(string.char(kc + 32))
+      local up = string.upper(string.char(kc))
+      orig_input = (orig_valid(inp) and orig_input or inp) .. up
+      ctx:push_input(string.lower(up))
       return 1  -- kAccepted
     elseif kc >= 97 and kc <= 122 or (kc == 39 and inp ~= '') then  -- a–z、'
       if ctx.caret_pos ~= #inp then return 2 end
@@ -474,7 +553,7 @@ function M.romazy_filter(input, env)
       if not seen[k1] then
         seen[k1] = true
         local c1 = Candidate(cand.type, cand.start, cand._end, '%',
-                             show_comment and 'pheqsen' or '')
+                             (show_comment and 'pheqsen' or ''))
         c1.preedit = pe
         yield(c1)
       end
@@ -488,7 +567,7 @@ function M.romazy_filter(input, env)
         end
         local seg_sep = (cand._end < #inp) and ' ' or ''
         local c2 = Candidate(cand.type, cand.start, cand._end, r .. seg_sep,
-                             show_comment and '%' or '')
+                             (show_comment and '%' or ''))
         c2.preedit = pe
         yield(c2)
       end
@@ -611,7 +690,7 @@ function M.romazy_filter(input, env)
           end
           local nc = Candidate(cand.type, cand.start, cand._end,
                                r .. seg_sep,
-                               show_comment and hanzi or '')
+                               (show_comment and hanzi or ''))
           if typed_full and typed_full ~= '' then
             nc.preedit = typed_full
           else
