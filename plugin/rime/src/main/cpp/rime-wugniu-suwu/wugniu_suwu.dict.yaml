@@ -484,6 +484,7 @@ import_tables:
 媚	mi6
 味	mi6
 尾	mi6
+艉	mi6
 梶	mi6
 芈	mi6
 羋	mi6
@@ -528,6 +529,7 @@ import_tables:
 未	vi6
 味	vi6
 尾	vi6
+艉	vi6
 娓	vi6
 吠	vi6
 亹	vi6
@@ -939,6 +941,7 @@ import_tables:
 詣	gni6
 羿	gni6
 尾	gni6
+艉	gni6
 二	gni6
 貳	gni6
 耳	gni6
@@ -977,6 +980,7 @@ import_tables:
 熹	shi1
 譆	shi1
 醯	shi1
+㷩	shi1
 喜	shi3
 囍	shi3
 蟢	shi3
@@ -1046,6 +1050,7 @@ import_tables:
 懿	yi6
 易	yi6
 矣	yi6
+枻	yi6
 衣	i1
 依	i1
 銥	i1
@@ -1266,6 +1271,7 @@ import_tables:
 荼	du2
 屠	du2
 馱	du2
+駄	du2
 坨	du2
 駝	du2
 鴕	du2
@@ -1652,6 +1658,7 @@ import_tables:
 歸	ciu1
 舉	ciu3
 擧	ciu3
+襷	ciu3
 櫸	ciu3
 鬼	ciu3
 矩	ciu3
@@ -1714,6 +1721,7 @@ import_tables:
 窶	jiu6
 虡	jiu6
 鐻	jiu6
+樻	jiu6
 虞	gniu2
 娛	gniu2
 禺	gniu2
@@ -1847,7 +1855,6 @@ import_tables:
 敗	ba6
 稗	ba6
 䇑	ba6
-吧	ba
 馬	ma1
 媽	ma1
 嗎	ma1
@@ -1975,7 +1982,7 @@ import_tables:
 峠	kha3
 垰	kha3
 楷	kha3
-快	kha
+快	kha5
 茄	ga2
 伽	ga2
 笳	ga2
@@ -2148,6 +2155,7 @@ import_tables:
 芭	po1
 笆	po1
 疤	po1
+吧	po1
 靶	po3
 把	po3
 鈀	po3
@@ -2592,6 +2600,7 @@ import_tables:
 擾	zau6
 嬈	zau6
 繞	zau6
+遶	zau6
 棹	zau6
 劭	zau6
 高	kau1
@@ -2781,6 +2790,7 @@ import_tables:
 凋	tiau1
 鵰	tiau1
 㚋	tiau1
+鯛	tiau1
 奝	tiau1
 䛬	tiau1
 鳥	tiau3
@@ -2952,6 +2962,7 @@ import_tables:
 嫋	gniau3
 裊	gniau3
 繞	gniau6
+遶	gniau6
 嬲	gniau6
 橈	gniau6
 囂	shiau1
@@ -3202,6 +3213,7 @@ import_tables:
 手	seu3
 扌	seu3
 首	seu3
+艏	seu3
 守	seu3
 溲	seu3
 滫	sieu3
@@ -4014,6 +4026,7 @@ import_tables:
 殘	ze2
 饞	ze2
 讒	ze2
+涎	ze2
 篅	ze2
 蕤	ze2
 篅	zoe2
@@ -4050,7 +4063,6 @@ import_tables:
 墜	ze6
 墜	zoe6		#上海又音
 銳	ze6
-銳	zoe6		#上海又音
 瑞	ze6
 瑞	zoe6		#上海又音
 蕊	ze6
@@ -4435,6 +4447,7 @@ import_tables:
 颴	zie2
 㳬	zie2
 䗠	zie2
+涎	zie2
 璿	zie2
 𤪻	zie2
 檈	zie2
@@ -4675,6 +4688,7 @@ import_tables:
 焱	ie3
 弇	ie3
 揜	ie3
+渰	ie3
 媕	ie3
 罨	ie3
 酓	ie3
@@ -4780,6 +4794,7 @@ import_tables:
 匱	gue6
 簣	gue6
 聵	gue6
+樻	gue6
 跪	gue6
 櫃	gue6
 柜	gue6
@@ -5130,6 +5145,7 @@ import_tables:
 扇	soe3
 陝	soe3
 閃	soe3
+睒	soe3
 糂	soe3
 糝	soe3
 匴	soe3
@@ -5868,6 +5884,7 @@ import_tables:
 簹	taon1
 擋	taon3
 黨	taon5
+党	taon5
 當	taon5
 擋	taon5
 檔	taon5
@@ -5985,6 +6002,7 @@ import_tables:
 傷	saon1
 殤	saon1
 觴	saon1
+塲	saon1
 雙	saon1
 霜	saon1
 孀	saon1
@@ -7303,6 +7321,7 @@ import_tables:
 瞀	mon2
 幪	mon2
 曚	mon2
+儚	mon2
 夢	mon6
 蠓	mon6
 獴	mon6
@@ -7597,6 +7616,7 @@ import_tables:
 冋	cion1
 坰	cion1
 駉	cion1
+弓	cion1
 冏	cion3
 迥	cion3
 炯	cion3
@@ -7998,6 +8018,7 @@ import_tables:
 瘧	gniaq8
 搦	gniaq8
 篛	gniaq8
+若	gniaq8
 藥	yaq8
 薬	yaq8
 葯	yaq8
@@ -8556,6 +8577,7 @@ import_tables:
 律	liq8
 𢫫	liq8
 𢯰	liq8
+葎	liq8
 埒	liq8
 埓	liq8
 鬣	liq8
@@ -9032,6 +9054,7 @@ import_tables:
 穆	moq8
 木	moq8
 沐	moq8
+凩	moq8
 目	moq8
 苜	moq8
 鉬	moq8
