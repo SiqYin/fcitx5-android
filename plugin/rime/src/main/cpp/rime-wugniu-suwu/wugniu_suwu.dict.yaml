@@ -310,6 +310,7 @@ import_tables:
 馳	zyu2
 弛	zyu2
 遲	zyu2
+墀	zyu2
 持	zyu2
 廚	zyu2
 櫥	zyu2
@@ -437,6 +438,7 @@ import_tables:
 郫	bi2
 鼙	bi2
 裨	bi2
+鞞	bi2
 比	bi2
 琵	bi2
 毗	bi2
@@ -791,6 +793,7 @@ import_tables:
 畸	ci1
 羈	ci1
 笄	ci1
+筓	ci1
 乩	ci1
 稽	ci1
 嵇	ci1
@@ -1403,6 +1406,9 @@ import_tables:
 梭	su1
 唆	su1
 睃	su1
+䟽	su1
+踈	su1
+疏	su1
 娑	su3
 數	su3
 鎖	su3
@@ -1420,6 +1426,8 @@ import_tables:
 疏	su5
 愫	su5
 嗉	su5
+遡	su5
+泝	su5
 雛	zu2
 鋤	zu2
 矬	zu2
@@ -2302,6 +2310,7 @@ import_tables:
 雅	ngo6
 花	ho1
 椛	ho1
+糀	ho1
 蝦	ho1
 鰕	ho1
 譁	ho1
@@ -2444,6 +2453,8 @@ import_tables:
 滔	thau1
 韜	thau1
 搯	thau1
+謟	thau1
+慆	thau1
 弢	thau1
 絛	thau1
 饕	thau1
@@ -2665,6 +2676,7 @@ import_tables:
 遨	ngau2
 螯	ngau2
 驁	ngau2
+聱	ngau2
 嗷	ngau2
 獒	ngau2
 廒	ngau2
@@ -4473,6 +4485,7 @@ import_tables:
 奸	cie1
 姧	cie1
 姦	cie1
+靬	cie1
 間	cie1
 監	cie1
 緘	cie1
@@ -4712,6 +4725,7 @@ import_tables:
 龜	kue1
 亀	kue1
 瑰	kue1
+瓌	kue1
 圭	kue1
 邽	kue1
 珪	kue1
@@ -6355,6 +6369,7 @@ import_tables:
 甄	tsen1
 箴	tsen1
 鍼	tsen1
+瑊	tsen1
 榛	tsen1
 臻	tsen1
 溱	tsen1
@@ -6648,6 +6663,8 @@ import_tables:
 恆	ghen2
 桁	ghen2
 蘅	ghen2
+洐	ghen2
+珩	ghen2
 恨	ghen6
 狠	ghen6
 恩	en1
@@ -6673,11 +6690,13 @@ import_tables:
 炳	pin3
 抦	pin3
 昞	pin3
+鞆	pin3
 昺	pin3
 併	pin3
 倂	pin3
 秉	pin3
 稟	pin3
+鞞	pin3
 柄	pin5
 鈵	pin5
 棅	pin5
@@ -7108,6 +7127,7 @@ import_tables:
 行	yin2
 珩	yin2
 胻	yin2
+洐	yin2
 形	yin2
 邢	yin2
 型	yin2
@@ -8194,6 +8214,7 @@ import_tables:
 捗	tseq7
 讋	tseq7
 笮	tseq7
+磔	tseq7
 策	tsheq7
 測	tsheq7
 惻	tsheq7
@@ -9096,6 +9117,7 @@ import_tables:
 屬	toq7		#詞綴「-篤toq7」之本字
 托	thoq7
 託	thoq7
+矺	thoq7
 侂	thoq7
 拓	thoq7
 橐	thoq7
@@ -9162,6 +9184,7 @@ import_tables:
 麓	loq8
 樚	loq8
 戮	loq8
+僇	loq8
 犖	loq8
 蓼	loq8
 作	tsoq7
